@@ -1,0 +1,24 @@
+{
+  "subtitles_with_timestamps": [
+    {
+      "start": 110.944,
+      "end": 112.73599999999999,
+      "text": "You guys, I'm doing all-new material tonight."
+    },
+    {
+      "start": 113.321,
+      "end": 115.364,
+      "text": "I have 12 new songs about my mother's suicide..."
+    },
+    {
+      "start": 115.532,
+      "end": 117.783,
+      "text": "...and one about a snowman."
+    }
+  ],
+  "subtitles_without_timestamps": [
+    "You guys, I'm doing all-new material tonight.",
+    "I have 12 new songs about my mother's suicide...",
+    "...and one about a snowman."
+  ]
+}

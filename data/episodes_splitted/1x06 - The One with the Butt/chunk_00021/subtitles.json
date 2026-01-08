@@ -1,0 +1,54 @@
+{
+  "subtitles_with_timestamps": [
+    {
+      "start": 1207.206,
+      "end": 1209.29,
+      "text": "[HUMMING]"
+    },
+    {
+      "start": 1213.378,
+      "end": 1217.465,
+      "text": "MONICA [THINKING]: If it bothers you that much, just go out and get the shoes."
+    },
+    {
+      "start": 1219.051,
+      "end": 1221.636,
+      "text": "No, don't do this!"
+    },
+    {
+      "start": 1221.887,
+      "end": 1223.304,
+      "text": "This is stupid!"
+    },
+    {
+      "start": 1223.555,
+      "end": 1226.641,
+      "text": "I don't have to prove anything. I'm gonna go get them."
+    },
+    {
+      "start": 1227.434,
+      "end": 1229.185,
+      "text": "But then everyone will know."
+    },
+    {
+      "start": 1230.687,
+      "end": 1234.982,
+      "text": "Unless I get them, and then wake up really early and put them back."
+    },
+    {
+      "start": 1235.359,
+      "end": 1236.943,
+      "text": "I need help!"
+    }
+  ],
+  "subtitles_without_timestamps": [
+    "[HUMMING]",
+    "MONICA [THINKING]: If it bothers you that much, just go out and get the shoes.",
+    "No, don't do this!",
+    "This is stupid!",
+    "I don't have to prove anything. I'm gonna go get them.",
+    "But then everyone will know.",
+    "Unless I get them, and then wake up really early and put them back.",
+    "I need help!"
+  ]
+}

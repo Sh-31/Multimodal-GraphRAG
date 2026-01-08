@@ -1,0 +1,120 @@
+{
+  "subtitles_with_timestamps": [
+    {
+      "start": 1018.475,
+      "end": 1021.269,
+      "text": "[PHONE RINGING]"
+    },
+    {
+      "start": 1023.439,
+      "end": 1025.565,
+      "text": "Ahem, hello?"
+    },
+    {
+      "start": 1025.733,
+      "end": 1027.817,
+      "text": "Yes, she is. Hold on a second, please."
+    },
+    {
+      "start": 1027.985,
+      "end": 1030.82,
+      "text": "Ahem, Monana, it's for you."
+    },
+    {
+      "start": 1030.988,
+      "end": 1032.989,
+      "text": "The credit card people."
+    },
+    {
+      "start": 1033.615,
+      "end": 1035.45,
+      "text": "Hello?"
+    },
+    {
+      "start": 1037.036,
+      "end": 1038.661,
+      "text": "Yes?"
+    },
+    {
+      "start": 1040.122,
+      "end": 1042.04,
+      "text": "Oh, my God!"
+    },
+    {
+      "start": 1042.916,
+      "end": 1044.417,
+      "text": "Thanks."
+    },
+    {
+      "start": 1045.419,
+      "end": 1046.919,
+      "text": "What?"
+    },
+    {
+      "start": 1047.087,
+      "end": 1049.547,
+      "text": "They've arrested Monica."
+    },
+    {
+      "start": 1060.017,
+      "end": 1062.351,
+      "text": "- Hi. - Hey."
+    },
+    {
+      "start": 1062.561,
+      "end": 1064.187,
+      "text": "How are you?"
+    },
+    {
+      "start": 1064.354,
+      "end": 1067.023,
+      "text": "I'm not too bad. Fortunately, blue's my color."
+    },
+    {
+      "start": 1068.442,
+      "end": 1069.776,
+      "text": "How did you know I was here?"
+    },
+    {
+      "start": 1071.862,
+      "end": 1073.404,
+      "text": "Because..."
+    },
+    {
+      "start": 1074.323,
+      "end": 1075.49,
+      "text": "...I'm Monica Geller."
+    },
+    {
+      "start": 1076.867,
+      "end": 1079.702,
+      "text": "It was my credit card you were using."
+    },
+    {
+      "start": 1079.87,
+      "end": 1082.246,
+      "text": "That I was not expecting."
+    }
+  ],
+  "subtitles_without_timestamps": [
+    "[PHONE RINGING]",
+    "Ahem, hello?",
+    "Yes, she is. Hold on a second, please.",
+    "Ahem, Monana, it's for you.",
+    "The credit card people.",
+    "Hello?",
+    "Yes?",
+    "Oh, my God!",
+    "Thanks.",
+    "What?",
+    "They've arrested Monica.",
+    "- Hi. - Hey.",
+    "How are you?",
+    "I'm not too bad. Fortunately, blue's my color.",
+    "How did you know I was here?",
+    "Because...",
+    "...I'm Monica Geller.",
+    "It was my credit card you were using.",
+    "That I was not expecting."
+  ]
+}

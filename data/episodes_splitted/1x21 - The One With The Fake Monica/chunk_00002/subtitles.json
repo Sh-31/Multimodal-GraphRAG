@@ -1,0 +1,30 @@
+{
+  "subtitles_with_timestamps": [
+    {
+      "start": 57.265,
+      "end": 60.684,
+      "text": "Hey, would you all relax? It's not that big a deal."
+    },
+    {
+      "start": 60.894,
+      "end": 63.228,
+      "text": "RACHEL: Marcel, stop it! Marcel! Bad monkey!"
+    },
+    {
+      "start": 63.396,
+      "end": 64.688,
+      "text": "- What? RACHEL: Ugh!"
+    },
+    {
+      "start": 65.231,
+      "end": 68.65,
+      "text": "Let's just say my Curious George doll is no longer curious."
+    }
+  ],
+  "subtitles_without_timestamps": [
+    "Hey, would you all relax? It's not that big a deal.",
+    "RACHEL: Marcel, stop it! Marcel! Bad monkey!",
+    "- What? RACHEL: Ugh!",
+    "Let's just say my Curious George doll is no longer curious."
+  ]
+}

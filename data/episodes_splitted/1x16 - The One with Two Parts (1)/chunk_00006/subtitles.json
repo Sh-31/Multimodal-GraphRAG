@@ -1,0 +1,108 @@
+{
+  "subtitles_with_timestamps": [
+    {
+      "start": 303.303,
+      "end": 304.511,
+      "text": "Ouch."
+    },
+    {
+      "start": 308.433,
+      "end": 310.017,
+      "text": "[INTERCOM BUZZES]"
+    },
+    {
+      "start": 310.184,
+      "end": 312.561,
+      "text": "[MIMICS INTERCOM BUZZING] - To you too, Helen."
+    },
+    {
+      "start": 313.396,
+      "end": 315.939,
+      "text": "HELEN [OVER INTERCOM]: Nina Bookbinder is here to see you."
+    },
+    {
+      "start": 316.19,
+      "end": 318.191,
+      "text": "Oh. Okay, send her in."
+    },
+    {
+      "start": 322.697,
+      "end": 323.739,
+      "text": "Hi."
+    },
+    {
+      "start": 324.032,
+      "end": 326.199,
+      "text": "- Hi, Nina. Come on in. - You wanted to see me?"
+    },
+    {
+      "start": 326.367,
+      "end": 329.077,
+      "text": "Uh, yes. Uh, I was just going over your data."
+    },
+    {
+      "start": 329.287,
+      "end": 331.747,
+      "text": "You've been postdating your Friday numbers."
+    },
+    {
+      "start": 332.04,
+      "end": 333.999,
+      "text": "Which is bad, because?"
+    },
+    {
+      "start": 334.20799999999997,
+      "end": 336.084,
+      "text": "- Well, it throws my WENUS out of whack. - Ha, ha."
+    },
+    {
+      "start": 337.253,
+      "end": 338.295,
+      "text": "Excuse me?"
+    },
+    {
+      "start": 339.005,
+      "end": 340.213,
+      "text": "WENUS. Ahem."
+    },
+    {
+      "start": 340.46500000000003,
+      "end": 342.632,
+      "text": "- Weekly Estimated... - Oh, Net Usage Statistics."
+    },
+    {
+      "start": 342.842,
+      "end": 344.718,
+      "text": "Right. Gotcha, gotcha."
+    },
+    {
+      "start": 344.927,
+      "end": 348.847,
+      "text": "Won't happen again. I wouldn't want to do anything to hurt your..."
+    },
+    {
+      "start": 349.057,
+      "end": 350.182,
+      "text": "...WENUS."
+    }
+  ],
+  "subtitles_without_timestamps": [
+    "Ouch.",
+    "[INTERCOM BUZZES]",
+    "[MIMICS INTERCOM BUZZING] - To you too, Helen.",
+    "HELEN [OVER INTERCOM]: Nina Bookbinder is here to see you.",
+    "Oh. Okay, send her in.",
+    "Hi.",
+    "- Hi, Nina. Come on in. - You wanted to see me?",
+    "Uh, yes. Uh, I was just going over your data.",
+    "You've been postdating your Friday numbers.",
+    "Which is bad, because?",
+    "- Well, it throws my WENUS out of whack. - Ha, ha.",
+    "Excuse me?",
+    "WENUS. Ahem.",
+    "- Weekly Estimated... - Oh, Net Usage Statistics.",
+    "Right. Gotcha, gotcha.",
+    "Won't happen again. I wouldn't want to do anything to hurt your...",
+    "...WENUS."
+  ]
+}

@@ -1,0 +1,96 @@
+{
+  "subtitles_with_timestamps": [
+    {
+      "start": 1138.387,
+      "end": 1142.807,
+      "text": "I thought that, \"Once the cards are dealt, I'm not a nice guy.\""
+    },
+    {
+      "start": 1142.975,
+      "end": 1144.517,
+      "text": "I mean, what? Were you just full of it?"
+    },
+    {
+      "start": 1152.985,
+      "end": 1154.443,
+      "text": "[CLEARS THROAT]"
+    },
+    {
+      "start": 1158.824,
+      "end": 1159.824,
+      "text": "I'm in."
+    },
+    {
+      "start": 1160.742,
+      "end": 1162.827,
+      "text": "- How many you want? - One."
+    },
+    {
+      "start": 1164.413,
+      "end": 1166.247,
+      "text": "Dealer takes two."
+    },
+    {
+      "start": 1166.748,
+      "end": 1169.542,
+      "text": "- What do you bet? - I bet $2."
+    },
+    {
+      "start": 1170.878,
+      "end": 1171.878,
+      "text": "Okay."
+    },
+    {
+      "start": 1172.045,
+      "end": 1173.796,
+      "text": "See your 2..."
+    },
+    {
+      "start": 1174.339,
+      "end": 1176.465,
+      "text": "...and I raise you..."
+    },
+    {
+      "start": 1178.218,
+      "end": 1180.261,
+      "text": "...20. - Wow."
+    },
+    {
+      "start": 1184.892,
+      "end": 1186.35,
+      "text": "I see your 20..."
+    },
+    {
+      "start": 1187.769,
+      "end": 1189.353,
+      "text": "...raise you 25."
+    },
+    {
+      "start": 1195.277,
+      "end": 1197.361,
+      "text": "See your 25..."
+    },
+    {
+      "start": 1197.696,
+      "end": 1199.363,
+      "text": "...and, uh, Monica, get my purse."
+    }
+  ],
+  "subtitles_without_timestamps": [
+    "I thought that, \"Once the cards are dealt, I'm not a nice guy.\"",
+    "I mean, what? Were you just full of it?",
+    "[CLEARS THROAT]",
+    "I'm in.",
+    "- How many you want? - One.",
+    "Dealer takes two.",
+    "- What do you bet? - I bet $2.",
+    "Okay.",
+    "See your 2...",
+    "...and I raise you...",
+    "...20. - Wow.",
+    "I see your 20...",
+    "...raise you 25.",
+    "See your 25...",
+    "...and, uh, Monica, get my purse."
+  ]
+}

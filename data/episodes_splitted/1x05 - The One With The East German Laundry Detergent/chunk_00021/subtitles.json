@@ -1,0 +1,90 @@
+{
+  "subtitles_with_timestamps": [
+    {
+      "start": 1200.032,
+      "end": 1202.158,
+      "text": "[HUMMING] La-la-la-la-la-la-la-la"
+    },
+    {
+      "start": 1203.285,
+      "end": 1205.661,
+      "text": "- I'm fine, I'm fine. - All right."
+    },
+    {
+      "start": 1205.871,
+      "end": 1207.705,
+      "text": "I'm not fine. Here she comes."
+    },
+    {
+      "start": 1207.915,
+      "end": 1209.749,
+      "text": "Wait here, okay? Breathe."
+    },
+    {
+      "start": 1212.586,
+      "end": 1214.712,
+      "text": "[PHOEBE & JANICE SPEAKING INAUDIBLEY]"
+    },
+    {
+      "start": 1228.727,
+      "end": 1230.061,
+      "text": "How do you do that?"
+    },
+    {
+      "start": 1230.312,
+      "end": 1232.355,
+      "text": "It's like a gift."
+    },
+    {
+      "start": 1235.025,
+      "end": 1237.36,
+      "text": "We should always, always break up together."
+    },
+    {
+      "start": 1237.611,
+      "end": 1238.736,
+      "text": "I'd like that."
+    },
+    {
+      "start": 1240.864,
+      "end": 1243.991,
+      "text": "ROSS: You got the clothes clean. That's the important part."
+    },
+    {
+      "start": 1244.201,
+      "end": 1247.578,
+      "text": "I guess. Except everything looks like jammies now."
+    },
+    {
+      "start": 1253.252,
+      "end": 1254.669,
+      "text": "Whoa, I'm sorry."
+    },
+    {
+      "start": 1254.92,
+      "end": 1257.421,
+      "text": "Excuse me. We had this cart."
+    },
+    {
+      "start": 1258.131,
+      "end": 1260.841,
+      "text": "I had a 24-inch waist. You lose things."
+    }
+  ],
+  "subtitles_without_timestamps": [
+    "[HUMMING] La-la-la-la-la-la-la-la",
+    "- I'm fine, I'm fine. - All right.",
+    "I'm not fine. Here she comes.",
+    "Wait here, okay? Breathe.",
+    "[PHOEBE & JANICE SPEAKING INAUDIBLEY]",
+    "How do you do that?",
+    "It's like a gift.",
+    "We should always, always break up together.",
+    "I'd like that.",
+    "ROSS: You got the clothes clean. That's the important part.",
+    "I guess. Except everything looks like jammies now.",
+    "Whoa, I'm sorry.",
+    "Excuse me. We had this cart.",
+    "I had a 24-inch waist. You lose things."
+  ]
+}

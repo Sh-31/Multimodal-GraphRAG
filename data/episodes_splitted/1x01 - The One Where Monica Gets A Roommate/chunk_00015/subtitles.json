@@ -1,0 +1,78 @@
+{
+  "subtitles_with_timestamps": [
+    {
+      "start": 856.605,
+      "end": 857.981,
+      "text": "Isn't this amazing?"
+    },
+    {
+      "start": 858.148,
+      "end": 860.483,
+      "text": "I mean, I have never made coffee before in my life."
+    },
+    {
+      "start": 860.651,
+      "end": 863.152,
+      "text": "- That is amazing. - Congratulations."
+    },
+    {
+      "start": 863.362,
+      "end": 868.074,
+      "text": "While you're on a roll, if you feel like you gotta make a Western omelet or something..."
+    },
+    {
+      "start": 870.995,
+      "end": 874.455,
+      "text": "Although, actually I'm really not that hungry this morning."
+    },
+    {
+      "start": 875.374,
+      "end": 876.708,
+      "text": "- Good morning. MONICA: Good morning."
+    },
+    {
+      "start": 876.876,
+      "end": 878.501,
+      "text": "- Morning. JOEY: Morning."
+    },
+    {
+      "start": 879.42,
+      "end": 881.588,
+      "text": "- Morning. JOEY: Morning, Paul."
+    },
+    {
+      "start": 881.755,
+      "end": 884.966,
+      "text": "- Hello, Paul. - Hi. Paul, is it?"
+    },
+    {
+      "start": 889.096,
+      "end": 891.848,
+      "text": "MONICA: I had a really great time last night."
+    },
+    {
+      "start": 892.016,
+      "end": 893.892,
+      "text": "PAUL: Thank you. Thank you so much."
+    },
+    {
+      "start": 894.602,
+      "end": 897.478,
+      "text": "- We'll talk later, okay? - Yeah."
+    }
+  ],
+  "subtitles_without_timestamps": [
+    "Isn't this amazing?",
+    "I mean, I have never made coffee before in my life.",
+    "- That is amazing. - Congratulations.",
+    "While you're on a roll, if you feel like you gotta make a Western omelet or something...",
+    "Although, actually I'm really not that hungry this morning.",
+    "- Good morning. MONICA: Good morning.",
+    "- Morning. JOEY: Morning.",
+    "- Morning. JOEY: Morning, Paul.",
+    "- Hello, Paul. - Hi. Paul, is it?",
+    "MONICA: I had a really great time last night.",
+    "PAUL: Thank you. Thank you so much.",
+    "- We'll talk later, okay? - Yeah."
+  ]
+}

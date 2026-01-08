@@ -1,0 +1,30 @@
+{
+  "subtitles_with_timestamps": [
+    {
+      "start": 108.733,
+      "end": 110.52600000000001,
+      "text": "So Saturday night, the big night."
+    },
+    {
+      "start": 110.777,
+      "end": 113.904,
+      "text": "Date night! Saturday night. Saturday night!"
+    },
+    {
+      "start": 115.99000000000001,
+      "end": 118.283,
+      "text": "- No plans, huh? - Not a one."
+    },
+    {
+      "start": 119.41,
+      "end": 121.328,
+      "text": "Not even, say, breaking up with Janice?"
+    }
+  ],
+  "subtitles_without_timestamps": [
+    "So Saturday night, the big night.",
+    "Date night! Saturday night. Saturday night!",
+    "- No plans, huh? - Not a one.",
+    "Not even, say, breaking up with Janice?"
+  ]
+}

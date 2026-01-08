@@ -1,0 +1,36 @@
+{
+  "subtitles_with_timestamps": [
+    {
+      "start": 108.81700000000001,
+      "end": 110.65100000000001,
+      "text": "- Hey, guys. BOTH: Hey."
+    },
+    {
+      "start": 110.819,
+      "end": 113.27799999999999,
+      "text": "Hey. Hi, ladies."
+    },
+    {
+      "start": 113.446,
+      "end": 115.94800000000001,
+      "text": "Uh, can I get you anything?"
+    },
+    {
+      "start": 116.116,
+      "end": 118.033,
+      "text": "- Did you bring the mail? - Lots of responses."
+    },
+    {
+      "start": 118.201,
+      "end": 121.12,
+      "text": "Really? Sure we have scones left."
+    }
+  ],
+  "subtitles_without_timestamps": [
+    "- Hey, guys. BOTH: Hey.",
+    "Hey. Hi, ladies.",
+    "Uh, can I get you anything?",
+    "- Did you bring the mail? - Lots of responses.",
+    "Really? Sure we have scones left."
+  ]
+}

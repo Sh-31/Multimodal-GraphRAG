@@ -1,0 +1,36 @@
+{
+  "subtitles_with_timestamps": [
+    {
+      "start": 10.844,
+      "end": 14.513,
+      "text": "[ROSS SINGS THEME SONG FROM THE ODD COUPLE]"
+    },
+    {
+      "start": 16.266,
+      "end": 18.976,
+      "text": "[CHANDLER JOINS IN]"
+    },
+    {
+      "start": 23.815,
+      "end": 26.692,
+      "text": "[MONICA & PHOEBE JOIN IN]"
+    },
+    {
+      "start": 56.056,
+      "end": 58.057,
+      "text": "[SINGING THEME FROM I DREAM OF JEANNIE]"
+    },
+    {
+      "start": 58.224,
+      "end": 59.975,
+      "text": "No, no, we're done. We're done, man."
+    }
+  ],
+  "subtitles_without_timestamps": [
+    "[ROSS SINGS THEME SONG FROM THE ODD COUPLE]",
+    "[CHANDLER JOINS IN]",
+    "[MONICA & PHOEBE JOIN IN]",
+    "[SINGING THEME FROM I DREAM OF JEANNIE]",
+    "No, no, we're done. We're done, man."
+  ]
+}

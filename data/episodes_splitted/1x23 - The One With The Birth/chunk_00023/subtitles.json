@@ -1,0 +1,42 @@
+{
+  "subtitles_with_timestamps": [
+    {
+      "start": 1328.91,
+      "end": 1330.703,
+      "text": "[MOUTHS] Hi, Ben."
+    },
+    {
+      "start": 1330.871,
+      "end": 1333.789,
+      "text": "- [MOUTHS] I love you. - Hi, Ben."
+    },
+    {
+      "start": 1333.957,
+      "end": 1336.083,
+      "text": "[BRAHMS' \"WIEGENLIED\" PLAYING MOBILE]"
+    },
+    {
+      "start": 1347.888,
+      "end": 1349.889,
+      "text": "[JOEY BLOWS RASPBERRY]"
+    },
+    {
+      "start": 1351.35,
+      "end": 1352.558,
+      "text": "[CHANDLER BLOWS RASPBERRY]"
+    },
+    {
+      "start": 1352.726,
+      "end": 1355.561,
+      "text": "Oh, look, he's closing his eyes again."
+    }
+  ],
+  "subtitles_without_timestamps": [
+    "[MOUTHS] Hi, Ben.",
+    "- [MOUTHS] I love you. - Hi, Ben.",
+    "[BRAHMS' \"WIEGENLIED\" PLAYING MOBILE]",
+    "[JOEY BLOWS RASPBERRY]",
+    "[CHANDLER BLOWS RASPBERRY]",
+    "Oh, look, he's closing his eyes again."
+  ]
+}

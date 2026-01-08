@@ -1,0 +1,102 @@
+{
+  "subtitles_with_timestamps": [
+    {
+      "start": 904.737,
+      "end": 905.778,
+      "text": "Hey."
+    },
+    {
+      "start": 906.947,
+      "end": 908.323,
+      "text": "Oh."
+    },
+    {
+      "start": 909.742,
+      "end": 911.409,
+      "text": "Um, you got a minute?"
+    },
+    {
+      "start": 911.66,
+      "end": 914.495,
+      "text": "Um, yeah, I'm just working."
+    },
+    {
+      "start": 922.796,
+      "end": 924.631,
+      "text": "- So... - Uh-huh?"
+    },
+    {
+      "start": 926.342,
+      "end": 928.551,
+      "text": "Um, oh, I got you a birthday present."
+    },
+    {
+      "start": 928.886,
+      "end": 930.345,
+      "text": "Oh, wow, you remembered."
+    },
+    {
+      "start": 935.059,
+      "end": 938.311,
+      "text": "Oh. It's a Judy Jetson Thermos."
+    },
+    {
+      "start": 938.52,
+      "end": 939.812,
+      "text": "Right. Like the kind you..."
+    },
+    {
+      "start": 940.022,
+      "end": 941.189,
+      "text": "Right."
+    },
+    {
+      "start": 941.857,
+      "end": 944.025,
+      "text": "Oh, I got something for you too."
+    },
+    {
+      "start": 944.234,
+      "end": 945.443,
+      "text": "How'd you know I was coming?"
+    },
+    {
+      "start": 945.611,
+      "end": 948.78,
+      "text": "Um, yeah, um, \"twin\" thing."
+    },
+    {
+      "start": 951.283,
+      "end": 953.368,
+      "text": "I can't believe you did this."
+    },
+    {
+      "start": 953.577,
+      "end": 955.37,
+      "text": "I can't believe you..."
+    },
+    {
+      "start": 955.621,
+      "end": 957.246,
+      "text": "...did this."
+    }
+  ],
+  "subtitles_without_timestamps": [
+    "Hey.",
+    "Oh.",
+    "Um, you got a minute?",
+    "Um, yeah, I'm just working.",
+    "- So... - Uh-huh?",
+    "Um, oh, I got you a birthday present.",
+    "Oh, wow, you remembered.",
+    "Oh. It's a Judy Jetson Thermos.",
+    "Right. Like the kind you...",
+    "Right.",
+    "Oh, I got something for you too.",
+    "How'd you know I was coming?",
+    "Um, yeah, um, \"twin\" thing.",
+    "I can't believe you did this.",
+    "I can't believe you...",
+    "...did this."
+  ]
+}

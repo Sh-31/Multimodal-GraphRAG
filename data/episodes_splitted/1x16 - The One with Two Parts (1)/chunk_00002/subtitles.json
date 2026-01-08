@@ -1,0 +1,54 @@
+{
+  "subtitles_with_timestamps": [
+    {
+      "start": 93.093,
+      "end": 95.969,
+      "text": "I don't know whether he's testing me or just acting out..."
+    },
+    {
+      "start": 96.179,
+      "end": 98.806,
+      "text": "...but my monkey is out of control."
+    },
+    {
+      "start": 100.68299999999999,
+      "end": 104.019,
+      "text": "He keeps erasing the messages on my machine."
+    },
+    {
+      "start": 104.27000000000001,
+      "end": 106.52199999999999,
+      "text": "Supposedly by accident."
+    },
+    {
+      "start": 107.19,
+      "end": 108.857,
+      "text": "Oh, yeah, I've done that."
+    },
+    {
+      "start": 112.15299999999999,
+      "end": 115.739,
+      "text": "And three days in a row, he got to the newspaper before I did..."
+    },
+    {
+      "start": 115.99000000000001,
+      "end": 118.2,
+      "text": "...and peed all over the crossword."
+    },
+    {
+      "start": 118.827,
+      "end": 120.828,
+      "text": "I've never done that."
+    }
+  ],
+  "subtitles_without_timestamps": [
+    "I don't know whether he's testing me or just acting out...",
+    "...but my monkey is out of control.",
+    "He keeps erasing the messages on my machine.",
+    "Supposedly by accident.",
+    "Oh, yeah, I've done that.",
+    "And three days in a row, he got to the newspaper before I did...",
+    "...and peed all over the crossword.",
+    "I've never done that."
+  ]
+}

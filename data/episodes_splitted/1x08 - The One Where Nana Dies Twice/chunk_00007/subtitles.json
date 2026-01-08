@@ -1,0 +1,84 @@
+{
+  "subtitles_with_timestamps": [
+    {
+      "start": 360.777,
+      "end": 362.361,
+      "text": "Uh, I'll go see."
+    },
+    {
+      "start": 363.404,
+      "end": 365.072,
+      "text": "[HEART MONITOR BEEPING]"
+    },
+    {
+      "start": 365.448,
+      "end": 367.157,
+      "text": "This almost never happens."
+    },
+    {
+      "start": 371.204,
+      "end": 372.996,
+      "text": "[HEART MONITOR STOPS]"
+    },
+    {
+      "start": 384.634,
+      "end": 386.76,
+      "text": "Now she's passed."
+    },
+    {
+      "start": 396.479,
+      "end": 398.688,
+      "text": "I just have to know, okay?"
+    },
+    {
+      "start": 399.273,
+      "end": 400.524,
+      "text": "Is it my hair?"
+    },
+    {
+      "start": 401.109,
+      "end": 404.152,
+      "text": "Yes, Chandler, that's exactly what it is. It's your hair."
+    },
+    {
+      "start": 404.404,
+      "end": 406.571,
+      "text": "Yeah, you have homosexual hair."
+    },
+    {
+      "start": 410.618,
+      "end": 412.577,
+      "text": "RACHEL: Hey. MONICA: Hi."
+    },
+    {
+      "start": 413.496,
+      "end": 414.788,
+      "text": "RACHEL: So did she?"
+    },
+    {
+      "start": 415.373,
+      "end": 416.665,
+      "text": "Twice."
+    },
+    {
+      "start": 418.835,
+      "end": 420.502,
+      "text": "Oh, that sucks."
+    }
+  ],
+  "subtitles_without_timestamps": [
+    "Uh, I'll go see.",
+    "[HEART MONITOR BEEPING]",
+    "This almost never happens.",
+    "[HEART MONITOR STOPS]",
+    "Now she's passed.",
+    "I just have to know, okay?",
+    "Is it my hair?",
+    "Yes, Chandler, that's exactly what it is. It's your hair.",
+    "Yeah, you have homosexual hair.",
+    "RACHEL: Hey. MONICA: Hi.",
+    "RACHEL: So did she?",
+    "Twice.",
+    "Oh, that sucks."
+  ]
+}

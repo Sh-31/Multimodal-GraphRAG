@@ -1,0 +1,114 @@
+{
+  "subtitles_with_timestamps": [
+    {
+      "start": 838.671,
+      "end": 840.171,
+      "text": "Sorry."
+    },
+    {
+      "start": 842.341,
+      "end": 843.508,
+      "text": "[MARCEL CHATTERING]"
+    },
+    {
+      "start": 844.093,
+      "end": 845.468,
+      "text": "CHANDLER: Marcel?"
+    },
+    {
+      "start": 845.636,
+      "end": 846.97,
+      "text": "JOEY: Marcel?"
+    },
+    {
+      "start": 847.137,
+      "end": 849.18,
+      "text": "- Marcel? - Marcel?"
+    },
+    {
+      "start": 855.062,
+      "end": 856.938,
+      "text": "Hi, can I help you?"
+    },
+    {
+      "start": 861.402,
+      "end": 865.321,
+      "text": "Uh, we're kind of having an emergency, and, ahem, we were looking for something."
+    },
+    {
+      "start": 866.74,
+      "end": 869.2,
+      "text": "- A monkey. - Yes, have you seen any?"
+    },
+    {
+      "start": 869.368,
+      "end": 872.078,
+      "text": "No. No, I haven't seen a monkey."
+    },
+    {
+      "start": 872.246,
+      "end": 873.955,
+      "text": "Do you know anything about fixing radiators?"
+    },
+    {
+      "start": 874.373,
+      "end": 877.5840000000001,
+      "text": "Sure, sure. Did you try turning the knob back the other way?"
+    },
+    {
+      "start": 878.168,
+      "end": 881.379,
+      "text": "- Of course. - Oh. Then, no."
+    },
+    {
+      "start": 885.05,
+      "end": 887.302,
+      "text": "Taste this daiquiri. Is there too much rum in here?"
+    },
+    {
+      "start": 887.469,
+      "end": 890.096,
+      "text": "Just a second. Hope you find your monkey."
+    },
+    {
+      "start": 890.264,
+      "end": 892.265,
+      "text": "Oh, no, wait. No, no, no. Wait, wait."
+    },
+    {
+      "start": 892.433,
+      "end": 895.935,
+      "text": "Um, we may not know about radiators, per se..."
+    },
+    {
+      "start": 896.103,
+      "end": 898.104,
+      "text": "...but we do have a certain amount of expertise..."
+    },
+    {
+      "start": 898.272,
+      "end": 900.773,
+      "text": "...in the heating and cooling milieu."
+    }
+  ],
+  "subtitles_without_timestamps": [
+    "Sorry.",
+    "[MARCEL CHATTERING]",
+    "CHANDLER: Marcel?",
+    "JOEY: Marcel?",
+    "- Marcel? - Marcel?",
+    "Hi, can I help you?",
+    "Uh, we're kind of having an emergency, and, ahem, we were looking for something.",
+    "- A monkey. - Yes, have you seen any?",
+    "No. No, I haven't seen a monkey.",
+    "Do you know anything about fixing radiators?",
+    "Sure, sure. Did you try turning the knob back the other way?",
+    "- Of course. - Oh. Then, no.",
+    "Taste this daiquiri. Is there too much rum in here?",
+    "Just a second. Hope you find your monkey.",
+    "Oh, no, wait. No, no, no. Wait, wait.",
+    "Um, we may not know about radiators, per se...",
+    "...but we do have a certain amount of expertise...",
+    "...in the heating and cooling milieu."
+  ]
+}

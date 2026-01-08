@@ -1,0 +1,54 @@
+{
+  "subtitles_with_timestamps": [
+    {
+      "start": 1320.652,
+      "end": 1323.112,
+      "text": "Hey, Joey. What's going on?"
+    },
+    {
+      "start": 1323.363,
+      "end": 1325.99,
+      "text": "Clear the tracks for the boobie payback express."
+    },
+    {
+      "start": 1326.241,
+      "end": 1328.034,
+      "text": "Next stop, Rachel Green."
+    },
+    {
+      "start": 1331.538,
+      "end": 1332.997,
+      "text": "[MONICA & JOEY YELL]"
+    },
+    {
+      "start": 1334.374,
+      "end": 1336.751,
+      "text": "Joey, what the hell were you doing?"
+    },
+    {
+      "start": 1337.252,
+      "end": 1339.545,
+      "text": "Sorry, wrong boobies."
+    },
+    {
+      "start": 1352.768,
+      "end": 1353.893,
+      "text": "Hello, Joey."
+    },
+    {
+      "start": 1355.437,
+      "end": 1356.645,
+      "text": "Hello, dear."
+    }
+  ],
+  "subtitles_without_timestamps": [
+    "Hey, Joey. What's going on?",
+    "Clear the tracks for the boobie payback express.",
+    "Next stop, Rachel Green.",
+    "[MONICA & JOEY YELL]",
+    "Joey, what the hell were you doing?",
+    "Sorry, wrong boobies.",
+    "Hello, Joey.",
+    "Hello, dear."
+  ]
+}

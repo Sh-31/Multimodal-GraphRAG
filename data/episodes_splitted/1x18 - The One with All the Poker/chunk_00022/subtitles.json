@@ -1,0 +1,78 @@
+{
+  "subtitles_with_timestamps": [
+    {
+      "start": 1270.811,
+      "end": 1272.186,
+      "text": "Full house."
+    },
+    {
+      "start": 1281.071,
+      "end": 1282.154,
+      "text": "You got me."
+    },
+    {
+      "start": 1282.322,
+      "end": 1283.406,
+      "text": "GROUP: Oh!"
+    },
+    {
+      "start": 1284.616,
+      "end": 1286.45,
+      "text": "[MONICA & PHOEBE HUMMING]"
+    },
+    {
+      "start": 1286.618,
+      "end": 1287.827,
+      "text": "[JOEY & CHANDLER GROANING]"
+    },
+    {
+      "start": 1289.496,
+      "end": 1291.539,
+      "text": "[SHOUTS]"
+    },
+    {
+      "start": 1293.5,
+      "end": 1296.294,
+      "text": "- That's a tough hand to beat. - I thought we had them."
+    },
+    {
+      "start": 1296.461,
+      "end": 1299.422,
+      "text": "Well, when you don't have the cards, you don't have the cards, you know?"
+    },
+    {
+      "start": 1300.257,
+      "end": 1301.841,
+      "text": "But look how happy she is."
+    },
+    {
+      "start": 1313.603,
+      "end": 1315.313,
+      "text": "ROSS: Airmail. CHANDLER: Airplane. Airport."
+    },
+    {
+      "start": 1315.48,
+      "end": 1319.4,
+      "text": "Airport '75. Airport '77. Airport '79."
+    },
+    {
+      "start": 1319.86,
+      "end": 1320.901,
+      "text": "[TIMER DINGS]"
+    }
+  ],
+  "subtitles_without_timestamps": [
+    "Full house.",
+    "You got me.",
+    "GROUP: Oh!",
+    "[MONICA & PHOEBE HUMMING]",
+    "[JOEY & CHANDLER GROANING]",
+    "[SHOUTS]",
+    "- That's a tough hand to beat. - I thought we had them.",
+    "Well, when you don't have the cards, you don't have the cards, you know?",
+    "But look how happy she is.",
+    "ROSS: Airmail. CHANDLER: Airplane. Airport.",
+    "Airport '75. Airport '77. Airport '79.",
+    "[TIMER DINGS]"
+  ]
+}

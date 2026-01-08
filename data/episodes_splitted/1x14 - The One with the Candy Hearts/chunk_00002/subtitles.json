@@ -1,0 +1,24 @@
+{
+  "subtitles_with_timestamps": [
+    {
+      "start": 59.934,
+      "end": 62.311,
+      "text": "JOEY & CHANDLER: Go, go, go."
+    },
+    {
+      "start": 64.314,
+      "end": 67.566,
+      "text": "- Think it'll work? - It's suicide. The man's got an egg."
+    },
+    {
+      "start": 118.03399999999999,
+      "end": 120.119,
+      "text": "MONICA: You cannot do this. RACHEL: What? Do what?"
+    }
+  ],
+  "subtitles_without_timestamps": [
+    "JOEY & CHANDLER: Go, go, go.",
+    "- Think it'll work? - It's suicide. The man's got an egg.",
+    "MONICA: You cannot do this. RACHEL: What? Do what?"
+  ]
+}

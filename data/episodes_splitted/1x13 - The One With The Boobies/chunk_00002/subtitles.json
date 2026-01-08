@@ -1,0 +1,78 @@
+{
+  "subtitles_with_timestamps": [
+    {
+      "start": 88.922,
+      "end": 91.507,
+      "text": "Honey, honey, tell them the story about your patient..."
+    },
+    {
+      "start": 91.674,
+      "end": 93.467,
+      "text": "...who thinks things are other things."
+    },
+    {
+      "start": 93.63499999999999,
+      "end": 95.25999999999999,
+      "text": "You know?"
+    },
+    {
+      "start": 95.595,
+      "end": 98.51400000000001,
+      "text": "Like when the phone rings and she takes a shower..."
+    },
+    {
+      "start": 100.30799999999999,
+      "end": 102.017,
+      "text": "That's pretty much it."
+    },
+    {
+      "start": 103.52000000000001,
+      "end": 105.813,
+      "text": "But you tell it really well, sweetie."
+    },
+    {
+      "start": 106.064,
+      "end": 108.19,
+      "text": "Thanks. Okay."
+    },
+    {
+      "start": 108.358,
+      "end": 110.98400000000001,
+      "text": "Now go away so we can talk about you."
+    },
+    {
+      "start": 111.48599999999999,
+      "end": 112.90299999999999,
+      "text": "Okay. I'll miss you."
+    },
+    {
+      "start": 115.031,
+      "end": 116.11500000000001,
+      "text": "Isn't he great?"
+    },
+    {
+      "start": 116.282,
+      "end": 118.61699999999999,
+      "text": "He's so cute. And he likes you so much."
+    },
+    {
+      "start": 118.827,
+      "end": 119.868,
+      "text": "I know. I know."
+    }
+  ],
+  "subtitles_without_timestamps": [
+    "Honey, honey, tell them the story about your patient...",
+    "...who thinks things are other things.",
+    "You know?",
+    "Like when the phone rings and she takes a shower...",
+    "That's pretty much it.",
+    "But you tell it really well, sweetie.",
+    "Thanks. Okay.",
+    "Now go away so we can talk about you.",
+    "Okay. I'll miss you.",
+    "Isn't he great?",
+    "He's so cute. And he likes you so much.",
+    "I know. I know."
+  ]
+}

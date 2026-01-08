@@ -1,0 +1,30 @@
+{
+  "subtitles_with_timestamps": [
+    {
+      "start": 59.893,
+      "end": 60.934,
+      "text": "CHANDLER: You okay there?"
+    },
+    {
+      "start": 61.102,
+      "end": 63.312,
+      "text": "I can't believe you two had sex in her dream."
+    },
+    {
+      "start": 64.981,
+      "end": 66.857,
+      "text": "I'm sorry. It was a one-time thing."
+    },
+    {
+      "start": 67.025,
+      "end": 70.527,
+      "text": "I was very drunk, and it was someone else's subconscious."
+    }
+  ],
+  "subtitles_without_timestamps": [
+    "CHANDLER: You okay there?",
+    "I can't believe you two had sex in her dream.",
+    "I'm sorry. It was a one-time thing.",
+    "I was very drunk, and it was someone else's subconscious."
+  ]
+}

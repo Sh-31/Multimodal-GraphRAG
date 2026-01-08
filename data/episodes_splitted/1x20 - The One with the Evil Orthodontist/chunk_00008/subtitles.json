@@ -1,0 +1,84 @@
+{
+  "subtitles_with_timestamps": [
+    {
+      "start": 418.543,
+      "end": 420.127,
+      "text": "Thanks, Bernice."
+    },
+    {
+      "start": 420.92,
+      "end": 422.879,
+      "text": "Let's go away this weekend."
+    },
+    {
+      "start": 423.047,
+      "end": 425.34,
+      "text": "Oh, Barry. Come on. This is all way too..."
+    },
+    {
+      "start": 425.508,
+      "end": 427.134,
+      "text": "No, we can go to Aruba."
+    },
+    {
+      "start": 427.969,
+      "end": 431.096,
+      "text": "When I went there on what would've been our honeymoon..."
+    },
+    {
+      "start": 431.264,
+      "end": 434.266,
+      "text": "...it was, uh... It was really nice. You would've liked it."
+    },
+    {
+      "start": 436.602,
+      "end": 438.645,
+      "text": "I had a bra."
+    },
+    {
+      "start": 449.991,
+      "end": 450.991,
+      "text": "Hey, Dr. Farber."
+    },
+    {
+      "start": 451.159,
+      "end": 454.411,
+      "text": "All right, Miss Green, everything looks fine."
+    },
+    {
+      "start": 454.579,
+      "end": 457.956,
+      "text": "Yep, I think we're starting to see some real progress here."
+    },
+    {
+      "start": 461.752,
+      "end": 464.88,
+      "text": "- What? - I'm 12, I'm not stupid."
+    },
+    {
+      "start": 475.183,
+      "end": 477.1,
+      "text": "- Can I use your phone? - Yeah."
+    },
+    {
+      "start": 477.26800000000003,
+      "end": 479.895,
+      "text": "Uh, but for future reference, um, that thing in your hand..."
+    }
+  ],
+  "subtitles_without_timestamps": [
+    "Thanks, Bernice.",
+    "Let's go away this weekend.",
+    "Oh, Barry. Come on. This is all way too...",
+    "No, we can go to Aruba.",
+    "When I went there on what would've been our honeymoon...",
+    "...it was, uh... It was really nice. You would've liked it.",
+    "I had a bra.",
+    "Hey, Dr. Farber.",
+    "All right, Miss Green, everything looks fine.",
+    "Yep, I think we're starting to see some real progress here.",
+    "- What? - I'm 12, I'm not stupid.",
+    "- Can I use your phone? - Yeah.",
+    "Uh, but for future reference, um, that thing in your hand..."
+  ]
+}

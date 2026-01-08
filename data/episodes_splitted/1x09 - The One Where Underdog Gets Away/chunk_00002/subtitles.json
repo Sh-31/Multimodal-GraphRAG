@@ -1,0 +1,30 @@
+{
+  "subtitles_with_timestamps": [
+    {
+      "start": 58.641,
+      "end": 60.309,
+      "text": "MAN: Yeah, over here. WOMAN: Yeah, I do."
+    },
+    {
+      "start": 63.438,
+      "end": 64.897,
+      "text": "Heh. Look at that."
+    },
+    {
+      "start": 115.74000000000001,
+      "end": 118.408,
+      "text": "Excuse me, sir? Hi. You come in here all the time."
+    },
+    {
+      "start": 118.576,
+      "end": 119.993,
+      "text": "MAN: Uh-huh. - I was just wondering..."
+    }
+  ],
+  "subtitles_without_timestamps": [
+    "MAN: Yeah, over here. WOMAN: Yeah, I do.",
+    "Heh. Look at that.",
+    "Excuse me, sir? Hi. You come in here all the time.",
+    "MAN: Uh-huh. - I was just wondering..."
+  ]
+}

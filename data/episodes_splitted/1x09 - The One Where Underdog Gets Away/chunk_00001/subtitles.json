@@ -1,0 +1,108 @@
+{
+  "subtitles_with_timestamps": [
+    {
+      "start": 8.299,
+      "end": 10.551,
+      "text": "Terry, I know I haven't worked here very long..."
+    },
+    {
+      "start": 10.719,
+      "end": 13.47,
+      "text": "...but I was wondering, do you think it would be possible..."
+    },
+    {
+      "start": 13.638,
+      "end": 16.724,
+      "text": "...if I got a $100 advance on my salary?"
+    },
+    {
+      "start": 17.267,
+      "end": 18.684,
+      "text": "An advance?"
+    },
+    {
+      "start": 18.852,
+      "end": 21.311,
+      "text": "It's so that I can spend Thanksgiving with my family."
+    },
+    {
+      "start": 21.479,
+      "end": 25.774,
+      "text": "See, every year, we go skiing in Vail, and normally my father pays for my ticket..."
+    },
+    {
+      "start": 25.942,
+      "end": 29.194,
+      "text": "...but I've sort of started this whole independent thing, you know..."
+    },
+    {
+      "start": 29.362,
+      "end": 32.573,
+      "text": "...which is actually why I took this \"job.\""
+    },
+    {
+      "start": 34.159,
+      "end": 37.578,
+      "text": "Rachel, Rachel, sweetheart."
+    },
+    {
+      "start": 37.746,
+      "end": 40.289,
+      "text": "You're a terrible, terrible waitress."
+    },
+    {
+      "start": 41.082,
+      "end": 44.043,
+      "text": "Really, really awful."
+    },
+    {
+      "start": 45.211,
+      "end": 48.38,
+      "text": "Okay, I hear what you're saying. I'm with you."
+    },
+    {
+      "start": 48.59,
+      "end": 50.215,
+      "text": "Um..."
+    },
+    {
+      "start": 50.383,
+      "end": 54.511,
+      "text": "But I'm trying really hard, and I think I'm doing better."
+    },
+    {
+      "start": 54.679,
+      "end": 57.097,
+      "text": "I really do."
+    },
+    {
+      "start": 57.265,
+      "end": 58.474,
+      "text": "Does anybody need coffee?"
+    },
+    {
+      "start": 58.641,
+      "end": 60.309,
+      "text": "MAN: Yeah, over here. WOMAN: Yeah, I do."
+    }
+  ],
+  "subtitles_without_timestamps": [
+    "Terry, I know I haven't worked here very long...",
+    "...but I was wondering, do you think it would be possible...",
+    "...if I got a $100 advance on my salary?",
+    "An advance?",
+    "It's so that I can spend Thanksgiving with my family.",
+    "See, every year, we go skiing in Vail, and normally my father pays for my ticket...",
+    "...but I've sort of started this whole independent thing, you know...",
+    "...which is actually why I took this \"job.\"",
+    "Rachel, Rachel, sweetheart.",
+    "You're a terrible, terrible waitress.",
+    "Really, really awful.",
+    "Okay, I hear what you're saying. I'm with you.",
+    "Um...",
+    "But I'm trying really hard, and I think I'm doing better.",
+    "I really do.",
+    "Does anybody need coffee?",
+    "MAN: Yeah, over here. WOMAN: Yeah, I do."
+  ]
+}

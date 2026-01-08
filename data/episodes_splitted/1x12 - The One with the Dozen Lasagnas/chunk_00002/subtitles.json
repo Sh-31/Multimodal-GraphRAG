@@ -1,0 +1,30 @@
+{
+  "subtitles_with_timestamps": [
+    {
+      "start": 109.4,
+      "end": 111.777,
+      "text": "Aunt Silv, stop yelling."
+    },
+    {
+      "start": 111.945,
+      "end": 114.571,
+      "text": "All I'm saying is, if you had told me vegetarian lasagna..."
+    },
+    {
+      "start": 114.739,
+      "end": 117.366,
+      "text": "...I would've made vegetarian lasagna."
+    },
+    {
+      "start": 119.077,
+      "end": 120.911,
+      "text": "Well, the meat's only every third layer."
+    }
+  ],
+  "subtitles_without_timestamps": [
+    "Aunt Silv, stop yelling.",
+    "All I'm saying is, if you had told me vegetarian lasagna...",
+    "...I would've made vegetarian lasagna.",
+    "Well, the meat's only every third layer."
+  ]
+}

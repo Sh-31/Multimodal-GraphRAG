@@ -1,0 +1,30 @@
+{
+  "subtitles_with_timestamps": [
+    {
+      "start": 1318.817,
+      "end": 1320.318,
+      "text": "ROSS: Mm."
+    },
+    {
+      "start": 1320.485,
+      "end": 1322.611,
+      "text": "And hey, here's to a lousy Christmas."
+    },
+    {
+      "start": 1322.779,
+      "end": 1324.071,
+      "text": "And a crappy New Year."
+    },
+    {
+      "start": 1324.239,
+      "end": 1326.532,
+      "text": "ALL: Hear, hear."
+    }
+  ],
+  "subtitles_without_timestamps": [
+    "ROSS: Mm.",
+    "And hey, here's to a lousy Christmas.",
+    "And a crappy New Year.",
+    "ALL: Hear, hear."
+  ]
+}

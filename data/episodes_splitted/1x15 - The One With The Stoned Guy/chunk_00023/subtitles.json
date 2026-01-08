@@ -1,0 +1,66 @@
+{
+  "subtitles_with_timestamps": [
+    {
+      "start": 1322.612,
+      "end": 1324.113,
+      "text": "Whoa."
+    },
+    {
+      "start": 1335.25,
+      "end": 1337.084,
+      "text": "- How's this? - Eek!"
+    },
+    {
+      "start": 1337.252,
+      "end": 1339.462,
+      "text": "- Sorry. How about over here? - Oh!"
+    },
+    {
+      "start": 1339.629,
+      "end": 1341.589,
+      "text": "See, now, that just means it's working."
+    },
+    {
+      "start": 1341.757,
+      "end": 1343.924,
+      "text": "- Does this hurt? - No."
+    },
+    {
+      "start": 1344.092,
+      "end": 1346.594,
+      "text": "- How about this? - Aah!"
+    },
+    {
+      "start": 1346.762,
+      "end": 1347.97,
+      "text": "There you go."
+    },
+    {
+      "start": 1348.138,
+      "end": 1349.597,
+      "text": "[CONTINUES YELLING]"
+    },
+    {
+      "start": 1355.354,
+      "end": 1356.354,
+      "text": "Oh, I'm gonna throw up."
+    },
+    {
+      "start": 1356.521,
+      "end": 1358.272,
+      "text": "[CONTINUES YELLING]"
+    }
+  ],
+  "subtitles_without_timestamps": [
+    "Whoa.",
+    "- How's this? - Eek!",
+    "- Sorry. How about over here? - Oh!",
+    "See, now, that just means it's working.",
+    "- Does this hurt? - No.",
+    "- How about this? - Aah!",
+    "There you go.",
+    "[CONTINUES YELLING]",
+    "Oh, I'm gonna throw up.",
+    "[CONTINUES YELLING]"
+  ]
+}

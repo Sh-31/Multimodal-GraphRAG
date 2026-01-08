@@ -1,0 +1,90 @@
+{
+  "subtitles_with_timestamps": [
+    {
+      "start": 718.718,
+      "end": 721.845,
+      "text": "Uh, he's not even wearing a jock strap."
+    },
+    {
+      "start": 727.435,
+      "end": 729.269,
+      "text": "What did I ask?"
+    },
+    {
+      "start": 738.028,
+      "end": 739.696,
+      "text": "[EKG BEEPING]"
+    },
+    {
+      "start": 739.905,
+      "end": 742.449,
+      "text": "- Hi. - Hi."
+    },
+    {
+      "start": 743.784,
+      "end": 745.452,
+      "text": "What are you doing here?"
+    },
+    {
+      "start": 745.619,
+      "end": 748.455,
+      "text": "Nothing. I just thought I'd stop by, you know, after the, ahem..."
+    },
+    {
+      "start": 748.622,
+      "end": 751.332,
+      "text": "That I, you know. Um, so, what are you doing here?"
+    },
+    {
+      "start": 753.335,
+      "end": 755.17,
+      "text": "I'm not really here."
+    },
+    {
+      "start": 755.337,
+      "end": 759.966,
+      "text": "I just thought I'd drop these off on the way. My way."
+    },
+    {
+      "start": 762.344,
+      "end": 765.555,
+      "text": "Do you, um, come here a lot..."
+    },
+    {
+      "start": 766.015,
+      "end": 767.265,
+      "text": "...without me?"
+    },
+    {
+      "start": 767.433,
+      "end": 770.226,
+      "text": "No, no, no."
+    },
+    {
+      "start": 772.855,
+      "end": 776.191,
+      "text": "So, um, do you think he's doing any better than he was this morning?"
+    },
+    {
+      "start": 777.777,
+      "end": 780.32,
+      "text": "How would I know? I wasn't here."
+    }
+  ],
+  "subtitles_without_timestamps": [
+    "Uh, he's not even wearing a jock strap.",
+    "What did I ask?",
+    "[EKG BEEPING]",
+    "- Hi. - Hi.",
+    "What are you doing here?",
+    "Nothing. I just thought I'd stop by, you know, after the, ahem...",
+    "That I, you know. Um, so, what are you doing here?",
+    "I'm not really here.",
+    "I just thought I'd drop these off on the way. My way.",
+    "Do you, um, come here a lot...",
+    "...without me?",
+    "No, no, no.",
+    "So, um, do you think he's doing any better than he was this morning?",
+    "How would I know? I wasn't here."
+  ]
+}

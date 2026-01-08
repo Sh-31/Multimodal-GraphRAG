@@ -1,0 +1,60 @@
+{
+  "subtitles_with_timestamps": [
+    {
+      "start": 1141.723,
+      "end": 1144.6,
+      "text": "Um, I'm not actually Amish."
+    },
+    {
+      "start": 1144.81,
+      "end": 1147.311,
+      "text": "Really? Then why are you like that?"
+    },
+    {
+      "start": 1163.453,
+      "end": 1165.037,
+      "text": "You by the door, in or out?"
+    },
+    {
+      "start": 1166.999,
+      "end": 1168.332,
+      "text": "In!"
+    },
+    {
+      "start": 1173.797,
+      "end": 1175.84,
+      "text": "You in the back, you're getting it wrong!"
+    },
+    {
+      "start": 1176.008,
+      "end": 1177.842,
+      "text": "At least I'm doing it!"
+    },
+    {
+      "start": 1192.566,
+      "end": 1196.485,
+      "text": "WOMAN [OVER PA]: This is the final boarding call for Flight 67 to San Diego..."
+    },
+    {
+      "start": 1196.653,
+      "end": 1198.988,
+      "text": "...boarding at Gate 42A."
+    },
+    {
+      "start": 1199.156,
+      "end": 1201.532,
+      "text": "Okay, goodbye, little monkey guy."
+    }
+  ],
+  "subtitles_without_timestamps": [
+    "Um, I'm not actually Amish.",
+    "Really? Then why are you like that?",
+    "You by the door, in or out?",
+    "In!",
+    "You in the back, you're getting it wrong!",
+    "At least I'm doing it!",
+    "WOMAN [OVER PA]: This is the final boarding call for Flight 67 to San Diego...",
+    "...boarding at Gate 42A.",
+    "Okay, goodbye, little monkey guy."
+  ]
+}

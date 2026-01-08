@@ -1,0 +1,90 @@
+{
+  "subtitles_with_timestamps": [
+    {
+      "start": 1019.309,
+      "end": 1022.937,
+      "text": "The bottom line is, smoking is cool, and you know it."
+    },
+    {
+      "start": 1025.441,
+      "end": 1026.816,
+      "text": "Ahem. Chandler?"
+    },
+    {
+      "start": 1027.026,
+      "end": 1028.776,
+      "text": "It's Alan. He wants to speak to you."
+    },
+    {
+      "start": 1028.986,
+      "end": 1030.82,
+      "text": "Really? He does?"
+    },
+    {
+      "start": 1032.239,
+      "end": 1034.407,
+      "text": "Hey, buddy. What's up?"
+    },
+    {
+      "start": 1036.035,
+      "end": 1038.369,
+      "text": "Oh, she told you about that, huh?"
+    },
+    {
+      "start": 1039.163,
+      "end": 1043.166,
+      "text": "Well, yeah. I have one now and then. Well, yeah, now."
+    },
+    {
+      "start": 1044.084,
+      "end": 1045.877,
+      "text": "Well, it's not that bad..."
+    },
+    {
+      "start": 1048.13,
+      "end": 1049.672,
+      "text": "Well, that's true."
+    },
+    {
+      "start": 1052.384,
+      "end": 1056.179,
+      "text": "Gee, you know, no one's ever put it like that before."
+    },
+    {
+      "start": 1056.597,
+      "end": 1058.723,
+      "text": "Well, okay. Thanks."
+    },
+    {
+      "start": 1069.109,
+      "end": 1070.151,
+      "text": "God, he's good."
+    },
+    {
+      "start": 1071.987,
+      "end": 1073.404,
+      "text": "If only he were a woman."
+    },
+    {
+      "start": 1073.614,
+      "end": 1075.406,
+      "text": "Yeah."
+    }
+  ],
+  "subtitles_without_timestamps": [
+    "The bottom line is, smoking is cool, and you know it.",
+    "Ahem. Chandler?",
+    "It's Alan. He wants to speak to you.",
+    "Really? He does?",
+    "Hey, buddy. What's up?",
+    "Oh, she told you about that, huh?",
+    "Well, yeah. I have one now and then. Well, yeah, now.",
+    "Well, it's not that bad...",
+    "Well, that's true.",
+    "Gee, you know, no one's ever put it like that before.",
+    "Well, okay. Thanks.",
+    "God, he's good.",
+    "If only he were a woman.",
+    "Yeah."
+  ]
+}

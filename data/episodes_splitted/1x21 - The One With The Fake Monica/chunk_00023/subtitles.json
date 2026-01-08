@@ -1,0 +1,42 @@
+{
+  "subtitles_with_timestamps": [
+    {
+      "start": 1329.369,
+      "end": 1333.164,
+      "text": "O! That I were a glove upon that hand..."
+    },
+    {
+      "start": 1333.332,
+      "end": 1337.043,
+      "text": "...that I might touch thy cheek."
+    },
+    {
+      "start": 1337.21,
+      "end": 1339.879,
+      "text": "WOMAN: That's fine. Thank you."
+    },
+    {
+      "start": 1340.047,
+      "end": 1341.839,
+      "text": "MAN: Next."
+    },
+    {
+      "start": 1345.552,
+      "end": 1348.346,
+      "text": "Hi. Uh, I'll be reading for the role of Mercutio."
+    },
+    {
+      "start": 1348.513,
+      "end": 1351.474,
+      "text": "MAN: Name? - Holden McGroin."
+    }
+  ],
+  "subtitles_without_timestamps": [
+    "O! That I were a glove upon that hand...",
+    "...that I might touch thy cheek.",
+    "WOMAN: That's fine. Thank you.",
+    "MAN: Next.",
+    "Hi. Uh, I'll be reading for the role of Mercutio.",
+    "MAN: Name? - Holden McGroin."
+  ]
+}

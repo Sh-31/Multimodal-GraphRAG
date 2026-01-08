@@ -1,0 +1,78 @@
+{
+  "subtitles_with_timestamps": [
+    {
+      "start": 777.151,
+      "end": 780.32,
+      "text": "Well, aren't there times when you come home at the end of the day..."
+    },
+    {
+      "start": 780.488,
+      "end": 784.949,
+      "text": "...and you're just like, \"If I see one more cup of coffee...\""
+    },
+    {
+      "start": 789.622,
+      "end": 791.831,
+      "text": "Ahem. Yeah. Gotcha."
+    },
+    {
+      "start": 793.042,
+      "end": 797.754,
+      "text": "- I'm gonna check up on your friend. - Okay, that's fine."
+    },
+    {
+      "start": 805.888,
+      "end": 809.39,
+      "text": "- So how did you know I was even here? ROY: Your mom called me."
+    },
+    {
+      "start": 809.6,
+      "end": 811.726,
+      "text": "So is this her?"
+    },
+    {
+      "start": 811.894,
+      "end": 813.645,
+      "text": "No, this is a loaner."
+    },
+    {
+      "start": 815.606,
+      "end": 817.899,
+      "text": "Listen, I'm sorry you had to do this by yourself."
+    },
+    {
+      "start": 818.067,
+      "end": 823.988,
+      "text": "Oh. I wasn't by myself. I had a doctor, a nurse and a helper guy."
+    },
+    {
+      "start": 825.658,
+      "end": 827.242,
+      "text": "So did you see who won the game?"
+    },
+    {
+      "start": 827.409,
+      "end": 830.954,
+      "text": "Yeah, Knicks by 10. They suck."
+    },
+    {
+      "start": 831.664,
+      "end": 833.915,
+      "text": "Eh, they're not so bad."
+    }
+  ],
+  "subtitles_without_timestamps": [
+    "Well, aren't there times when you come home at the end of the day...",
+    "...and you're just like, \"If I see one more cup of coffee...\"",
+    "Ahem. Yeah. Gotcha.",
+    "- I'm gonna check up on your friend. - Okay, that's fine.",
+    "- So how did you know I was even here? ROY: Your mom called me.",
+    "So is this her?",
+    "No, this is a loaner.",
+    "Listen, I'm sorry you had to do this by yourself.",
+    "Oh. I wasn't by myself. I had a doctor, a nurse and a helper guy.",
+    "So did you see who won the game?",
+    "Yeah, Knicks by 10. They suck.",
+    "Eh, they're not so bad."
+  ]
+}

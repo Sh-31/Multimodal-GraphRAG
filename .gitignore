@@ -1,0 +1,16 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+.env
+# Docker
+db_data/neo4j_db/*
+db_data/qdrant_db/*
+
+docs/*

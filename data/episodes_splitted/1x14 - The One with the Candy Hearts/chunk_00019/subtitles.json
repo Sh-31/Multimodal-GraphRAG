@@ -1,0 +1,96 @@
+{
+  "subtitles_with_timestamps": [
+    {
+      "start": 1080.079,
+      "end": 1081.537,
+      "text": "Don't you know it yet?"
+    },
+    {
+      "start": 1081.789,
+      "end": 1084.957,
+      "text": "You love me, Chandler Bing."
+    },
+    {
+      "start": 1089.171,
+      "end": 1090.755,
+      "text": "Oh, no, I don't."
+    },
+    {
+      "start": 1091.507,
+      "end": 1094.258,
+      "text": "Then why do you think we keep ending up together?"
+    },
+    {
+      "start": 1094.51,
+      "end": 1096.344,
+      "text": "New Year's, who invited who?"
+    },
+    {
+      "start": 1096.595,
+      "end": 1099.472,
+      "text": "Valentine's, who asked who into whose bed?"
+    },
+    {
+      "start": 1099.723,
+      "end": 1102.141,
+      "text": "- I did, but... - You seek me out."
+    },
+    {
+      "start": 1102.392,
+      "end": 1107.522,
+      "text": "Something deep in your soul calls out to me like a foghorn."
+    },
+    {
+      "start": 1107.856,
+      "end": 1111.651,
+      "text": "Janice. Janice."
+    },
+    {
+      "start": 1111.944,
+      "end": 1114.237,
+      "text": "You want me. You need me."
+    },
+    {
+      "start": 1114.53,
+      "end": 1117.698,
+      "text": "You can't live without me."
+    },
+    {
+      "start": 1118.033,
+      "end": 1119.575,
+      "text": "And you know it."
+    },
+    {
+      "start": 1119.952,
+      "end": 1123.83,
+      "text": "You just don't know you know it."
+    },
+    {
+      "start": 1128.252,
+      "end": 1129.335,
+      "text": "See you."
+    },
+    {
+      "start": 1136.301,
+      "end": 1137.51,
+      "text": "Call me."
+    }
+  ],
+  "subtitles_without_timestamps": [
+    "Don't you know it yet?",
+    "You love me, Chandler Bing.",
+    "Oh, no, I don't.",
+    "Then why do you think we keep ending up together?",
+    "New Year's, who invited who?",
+    "Valentine's, who asked who into whose bed?",
+    "- I did, but... - You seek me out.",
+    "Something deep in your soul calls out to me like a foghorn.",
+    "Janice. Janice.",
+    "You want me. You need me.",
+    "You can't live without me.",
+    "And you know it.",
+    "You just don't know you know it.",
+    "See you.",
+    "Call me."
+  ]
+}

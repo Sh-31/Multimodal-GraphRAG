@@ -1,0 +1,96 @@
+{
+  "subtitles_with_timestamps": [
+    {
+      "start": 839.463,
+      "end": 841.297,
+      "text": "Okay. No, you do it."
+    },
+    {
+      "start": 842.007,
+      "end": 844.217,
+      "text": "Hello. This is Monica."
+    },
+    {
+      "start": 844.635,
+      "end": 845.76,
+      "text": "Yeah?"
+    },
+    {
+      "start": 846.595,
+      "end": 848.179,
+      "text": "Oh. Okay."
+    },
+    {
+      "start": 848.43,
+      "end": 850.723,
+      "text": "Yes, we'll be right down. Thank you."
+    },
+    {
+      "start": 851.892,
+      "end": 854.644,
+      "text": "We forgot to sign one of the admissions forms."
+    },
+    {
+      "start": 855.312,
+      "end": 858.106,
+      "text": "- Okay, you're right, this wasn't worth it. - Thank you."
+    },
+    {
+      "start": 858.399,
+      "end": 860.066,
+      "text": "- Okay, let me just change. - Yes."
+    },
+    {
+      "start": 863.195,
+      "end": 865.238,
+      "text": "- Hey. - Hey."
+    },
+    {
+      "start": 866.156,
+      "end": 867.24,
+      "text": "Trouble?"
+    },
+    {
+      "start": 868.492,
+      "end": 870.618,
+      "text": "Your sister stood me up the other night."
+    },
+    {
+      "start": 870.828,
+      "end": 874.455,
+      "text": "Oh, no. Don't you hate it when people aren't there for you?"
+    },
+    {
+      "start": 876.417,
+      "end": 879.377,
+      "text": "- Did you try calling her? - I've been trying for two days."
+    },
+    {
+      "start": 879.628,
+      "end": 882.38,
+      "text": "When I called the restaurant, they said she was too busy to talk."
+    },
+    {
+      "start": 882.631,
+      "end": 885.3,
+      "text": "I can't believe she's blowing me off."
+    }
+  ],
+  "subtitles_without_timestamps": [
+    "Okay. No, you do it.",
+    "Hello. This is Monica.",
+    "Yeah?",
+    "Oh. Okay.",
+    "Yes, we'll be right down. Thank you.",
+    "We forgot to sign one of the admissions forms.",
+    "- Okay, you're right, this wasn't worth it. - Thank you.",
+    "- Okay, let me just change. - Yes.",
+    "- Hey. - Hey.",
+    "Trouble?",
+    "Your sister stood me up the other night.",
+    "Oh, no. Don't you hate it when people aren't there for you?",
+    "- Did you try calling her? - I've been trying for two days.",
+    "When I called the restaurant, they said she was too busy to talk.",
+    "I can't believe she's blowing me off."
+  ]
+}

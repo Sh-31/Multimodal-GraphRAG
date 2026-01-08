@@ -1,0 +1,42 @@
+{
+  "subtitles_with_timestamps": [
+    {
+      "start": 4.004,
+      "end": 5.087,
+      "text": "Okay, okay, I checked."
+    },
+    {
+      "start": 5.255,
+      "end": 9.133,
+      "text": "We have Earl Grey, English Breakfast, cinnamon stick..."
+    },
+    {
+      "start": 9.3,
+      "end": 13.137,
+      "text": "...chamomile, mint medley, blackberry and, uh..."
+    },
+    {
+      "start": 13.304,
+      "end": 15.889,
+      "text": "Oh, wait, there's one more, um... Lemon soother."
+    },
+    {
+      "start": 17.851,
+      "end": 21.061,
+      "text": "You're not the guy that asked for the tea, are you?"
+    },
+    {
+      "start": 21.688,
+      "end": 22.896,
+      "text": "Okay."
+    }
+  ],
+  "subtitles_without_timestamps": [
+    "Okay, okay, I checked.",
+    "We have Earl Grey, English Breakfast, cinnamon stick...",
+    "...chamomile, mint medley, blackberry and, uh...",
+    "Oh, wait, there's one more, um... Lemon soother.",
+    "You're not the guy that asked for the tea, are you?",
+    "Okay."
+  ]
+}

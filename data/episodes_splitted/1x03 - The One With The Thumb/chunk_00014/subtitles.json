@@ -1,0 +1,36 @@
+{
+  "subtitles_with_timestamps": [
+    {
+      "start": 825.825,
+      "end": 827.283,
+      "text": "Keep the change."
+    },
+    {
+      "start": 828.035,
+      "end": 829.077,
+      "text": "Thanks, Lizzy."
+    },
+    {
+      "start": 829.2860000000001,
+      "end": 830.453,
+      "text": "Sure you don't want a pretzel?"
+    },
+    {
+      "start": 830.663,
+      "end": 833.665,
+      "text": "- No, I'm fine. Thanks. - See you."
+    },
+    {
+      "start": 839.338,
+      "end": 841.214,
+      "text": "Huh."
+    }
+  ],
+  "subtitles_without_timestamps": [
+    "Keep the change.",
+    "Thanks, Lizzy.",
+    "Sure you don't want a pretzel?",
+    "- No, I'm fine. Thanks. - See you.",
+    "Huh."
+  ]
+}

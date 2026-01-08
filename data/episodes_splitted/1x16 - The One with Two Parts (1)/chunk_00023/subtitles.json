@@ -1,0 +1,66 @@
+{
+  "subtitles_with_timestamps": [
+    {
+      "start": 1327.451,
+      "end": 1330.786,
+      "text": "Rachel, what are you doing? It's freezing. Would you come inside?"
+    },
+    {
+      "start": 1330.996,
+      "end": 1332.83,
+      "text": "No, no, no."
+    },
+    {
+      "start": 1333.04,
+      "end": 1335.75,
+      "text": "You wanted me to take them down..."
+    },
+    {
+      "start": 1335.959,
+      "end": 1338.544,
+      "text": "...so I'm taking them down, okay?"
+    },
+    {
+      "start": 1339.296,
+      "end": 1340.421,
+      "text": "[RACHEL YELLS]"
+    },
+    {
+      "start": 1340.589,
+      "end": 1343.257,
+      "text": "Rachel!"
+    },
+    {
+      "start": 1343.425,
+      "end": 1345.551,
+      "text": "I'm okay. I'm okay."
+    },
+    {
+      "start": 1346.678,
+      "end": 1347.928,
+      "text": "Mr. Heckles?"
+    },
+    {
+      "start": 1348.847,
+      "end": 1351.599,
+      "text": "Mr. Heckles, could you help me, please?"
+    },
+    {
+      "start": 1352.768,
+      "end": 1355.978,
+      "text": "See, this is just the kind of thing I was talking about."
+    }
+  ],
+  "subtitles_without_timestamps": [
+    "Rachel, what are you doing? It's freezing. Would you come inside?",
+    "No, no, no.",
+    "You wanted me to take them down...",
+    "...so I'm taking them down, okay?",
+    "[RACHEL YELLS]",
+    "Rachel!",
+    "I'm okay. I'm okay.",
+    "Mr. Heckles?",
+    "Mr. Heckles, could you help me, please?",
+    "See, this is just the kind of thing I was talking about."
+  ]
+}

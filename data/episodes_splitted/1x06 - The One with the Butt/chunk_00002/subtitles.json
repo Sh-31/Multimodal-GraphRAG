@@ -1,0 +1,36 @@
+{
+  "subtitles_with_timestamps": [
+    {
+      "start": 99.93299999999999,
+      "end": 102.434,
+      "text": "[AUDIENCE CHEERS] [ZANY PIANO MUSIC PLAYING]"
+    },
+    {
+      "start": 107.607,
+      "end": 109.358,
+      "text": "[ALL GROAN]"
+    },
+    {
+      "start": 111.277,
+      "end": 113.40299999999999,
+      "text": "I feel violated."
+    },
+    {
+      "start": 114.197,
+      "end": 117.324,
+      "text": "Did anybody else feel like peeling their skin off..."
+    },
+    {
+      "start": 117.53399999999999,
+      "end": 119.451,
+      "text": "...to have something else to do?"
+    }
+  ],
+  "subtitles_without_timestamps": [
+    "[AUDIENCE CHEERS] [ZANY PIANO MUSIC PLAYING]",
+    "[ALL GROAN]",
+    "I feel violated.",
+    "Did anybody else feel like peeling their skin off...",
+    "...to have something else to do?"
+  ]
+}

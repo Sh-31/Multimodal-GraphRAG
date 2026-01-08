@@ -1,0 +1,72 @@
+{
+  "subtitles_with_timestamps": [
+    {
+      "start": 1319.86,
+      "end": 1320.901,
+      "text": "[TIMER DINGS]"
+    },
+    {
+      "start": 1321.069,
+      "end": 1322.153,
+      "text": "RACHEL: Time's up."
+    },
+    {
+      "start": 1322.321,
+      "end": 1324.739,
+      "text": "Bye Bye Birdie."
+    },
+    {
+      "start": 1326.533,
+      "end": 1328.659,
+      "text": "That's a bird?"
+    },
+    {
+      "start": 1328.827,
+      "end": 1330.411,
+      "text": "That's a bird."
+    },
+    {
+      "start": 1331.872,
+      "end": 1333.789,
+      "text": "RACHEL: Okay, okay, it's my turn."
+    },
+    {
+      "start": 1335.876,
+      "end": 1337.376,
+      "text": "Go."
+    },
+    {
+      "start": 1338.879,
+      "end": 1341.839,
+      "text": "Uh, Bean. Bean."
+    },
+    {
+      "start": 1343.425,
+      "end": 1345.843,
+      "text": "- The Unbearable Lightness of Being. - Yes!"
+    },
+    {
+      "start": 1346.011,
+      "end": 1347.094,
+      "text": "[ALL SHOUTING]"
+    },
+    {
+      "start": 1349.181,
+      "end": 1353.184,
+      "text": "That you get?"
+    }
+  ],
+  "subtitles_without_timestamps": [
+    "[TIMER DINGS]",
+    "RACHEL: Time's up.",
+    "Bye Bye Birdie.",
+    "That's a bird?",
+    "That's a bird.",
+    "RACHEL: Okay, okay, it's my turn.",
+    "Go.",
+    "Uh, Bean. Bean.",
+    "- The Unbearable Lightness of Being. - Yes!",
+    "[ALL SHOUTING]",
+    "That you get?"
+  ]
+}

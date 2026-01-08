@@ -1,0 +1,36 @@
+{
+  "subtitles_with_timestamps": [
+    {
+      "start": 47.881,
+      "end": 49.757,
+      "text": "[CAR HORNS HONKING]"
+    },
+    {
+      "start": 49.966,
+      "end": 52.76,
+      "text": "There's nothing to tell. It's just some guy I work with."
+    },
+    {
+      "start": 52.969,
+      "end": 55.137,
+      "text": "Come on. You're going out with a guy."
+    },
+    {
+      "start": 55.305,
+      "end": 57.848,
+      "text": "There's gotta be something wrong with him."
+    },
+    {
+      "start": 58.058,
+      "end": 59.933,
+      "text": "So does he have a hump and a hair piece?"
+    }
+  ],
+  "subtitles_without_timestamps": [
+    "[CAR HORNS HONKING]",
+    "There's nothing to tell. It's just some guy I work with.",
+    "Come on. You're going out with a guy.",
+    "There's gotta be something wrong with him.",
+    "So does he have a hump and a hair piece?"
+  ]
+}

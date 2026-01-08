@@ -1,0 +1,90 @@
+{
+  "subtitles_with_timestamps": [
+    {
+      "start": 1320.986,
+      "end": 1322.486,
+      "text": "Hello?"
+    },
+    {
+      "start": 1323.03,
+      "end": 1326.907,
+      "text": "- Oh. Rachel, it's the Visa-card people. RACHEL: Oh, okay. Will you take my place?"
+    },
+    {
+      "start": 1327.075,
+      "end": 1328.993,
+      "text": "All right. Yes, this is Rachel."
+    },
+    {
+      "start": 1329.202,
+      "end": 1330.661,
+      "text": "RACHEL: No. - Oh."
+    },
+    {
+      "start": 1332.914,
+      "end": 1333.956,
+      "text": "Hello?"
+    },
+    {
+      "start": 1334.166,
+      "end": 1338.044,
+      "text": "Oh, yeah. No, I know. I haven't been using it much."
+    },
+    {
+      "start": 1338.211,
+      "end": 1341.756,
+      "text": "Oh, well, thanks, but I'm okay, really."
+    },
+    {
+      "start": 1341.923,
+      "end": 1343.299,
+      "text": "To the green, to the green."
+    },
+    {
+      "start": 1343.467,
+      "end": 1344.675,
+      "text": "MONICA: Oh, no. - To the green."
+    },
+    {
+      "start": 1344.843,
+      "end": 1347.178,
+      "text": "I've got magic beans."
+    },
+    {
+      "start": 1349.473,
+      "end": 1350.973,
+      "text": "No, no, never mind."
+    },
+    {
+      "start": 1351.141,
+      "end": 1352.558,
+      "text": "CHANDLER: To the left. To the left."
+    },
+    {
+      "start": 1352.726,
+      "end": 1354.101,
+      "text": "[ALL YELL]"
+    },
+    {
+      "start": 1355.228,
+      "end": 1357.396,
+      "text": "I'm fine."
+    }
+  ],
+  "subtitles_without_timestamps": [
+    "Hello?",
+    "- Oh. Rachel, it's the Visa-card people. RACHEL: Oh, okay. Will you take my place?",
+    "All right. Yes, this is Rachel.",
+    "RACHEL: No. - Oh.",
+    "Hello?",
+    "Oh, yeah. No, I know. I haven't been using it much.",
+    "Oh, well, thanks, but I'm okay, really.",
+    "To the green, to the green.",
+    "MONICA: Oh, no. - To the green.",
+    "I've got magic beans.",
+    "No, no, never mind.",
+    "CHANDLER: To the left. To the left.",
+    "[ALL YELL]",
+    "I'm fine."
+  ]
+}

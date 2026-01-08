@@ -1,0 +1,54 @@
+{
+  "subtitles_with_timestamps": [
+    {
+      "start": 102.143,
+      "end": 103.936,
+      "text": "This is so cool, you guys."
+    },
+    {
+      "start": 104.187,
+      "end": 106.22999999999999,
+      "text": "The entire city's blacked out."
+    },
+    {
+      "start": 106.481,
+      "end": 108.982,
+      "text": "Mom says it's Manhattan, Brooklyn and Queens..."
+    },
+    {
+      "start": 109.19200000000001,
+      "end": 111.11,
+      "text": "...and doesn't know when it'll be back on."
+    },
+    {
+      "start": 111.277,
+      "end": 113.27799999999999,
+      "text": "PHOEBE: Wow. RACHEL: You guys, this is big."
+    },
+    {
+      "start": 113.53,
+      "end": 115.82300000000001,
+      "text": "Pants and a sweater. Why, Mom?"
+    },
+    {
+      "start": 116.074,
+      "end": 117.825,
+      "text": "Who will I meet in a blackout?"
+    },
+    {
+      "start": 119.327,
+      "end": 122.704,
+      "text": "Power-company guys? Eligible looters?"
+    }
+  ],
+  "subtitles_without_timestamps": [
+    "This is so cool, you guys.",
+    "The entire city's blacked out.",
+    "Mom says it's Manhattan, Brooklyn and Queens...",
+    "...and doesn't know when it'll be back on.",
+    "PHOEBE: Wow. RACHEL: You guys, this is big.",
+    "Pants and a sweater. Why, Mom?",
+    "Who will I meet in a blackout?",
+    "Power-company guys? Eligible looters?"
+  ]
+}
