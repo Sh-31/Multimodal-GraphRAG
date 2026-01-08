@@ -17,9 +17,6 @@ We use `uv` for lightning-fast dependency management, but you can also use `pip`
 ```bash
 # Using uv
 uv sync
-
-# Or using pip
-pip install -r requirements.txt
 ```
 
 ### Docker Services
@@ -96,3 +93,4 @@ The retrieval process is done by a hybrid approach that combines semantic search
   1. **Graph First**: The query is first run against Neo4j using the `GraphCypherQAChain`.
   2. **Vector Fallback**: If the graph result is insufficient, the system falls back to a vector search in **Qdrant** (using semantic embeddings).
   3. **Graph Learning (Backfilling)**: If a valid answer is found via RAG/Vector search, the system extracts new knowledge and updates the Neo4j Graph, reconstructing missing information and improving the system over time.
+
