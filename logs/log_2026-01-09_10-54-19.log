@@ -1,0 +1,18 @@
+2026-01-09 10:54:19,238 - KnowledgeGraph - INFO - Querying: What timesteps rachel appeared in wedding dress?
+2026-01-09 10:54:33,990 - KnowledgeGraph - INFO - Graph answer ('I don't know the answer.') insufficient/invalid, falling back to Vector DB...
+2026-01-09 10:54:34,060 - KnowledgeGraph - INFO - Context retrieved from Vector DB:
+2026-01-09 10:54:34,060 - KnowledgeGraph - INFO - Video: 1x01 - The One Where Monica Gets A Roommate 
+Time: 00:09:59.140 - 00:14:57.478
+Content: *   **Emotional Tone:** The narrative shifts between frustration (Ross), awkwardness and tension (Monica and Chandler's restaurant conversation), distress (Rachel with the wedding dress), and casual camaraderie (morning coffee chat).
+*   **Plot Setup:** Monica's revelation about her ex and her subsequent sexual difficulties sets up a significant plot point. Rachel's distress with the wedding dress suggests a major life event or change.
+---
+Video: 1x01 - The One Where Monica Gets A Roommate 
+Time: 00:00:47.881 - 00:05:02.718
+Content: becomes more dramatic when Rachel bursts in, disheveled and wearing a wedding dress, having just left her fiancé at the altar. She seeks comfort from Monica and confides in Ross and the others about her decision, expressing confusion and anxiety about her feelings and her fiancé, Barry. The friends offer support and listen intently to Rachel's emotional crisis.
+---
+Video: 1x01 - The One Where Monica Gets A Roommate 
+Time: 00:00:47.881 - 00:05:02.718
+Content: The group is gathered at Central Perk, initially engaged in casual conversation where Ross discusses a coworker and Monica shares a dream about her mother. The mood shifts as Ross reveals his ex-wife Carol is moving out, causing tension. The atmosphere becomes more dramatic when Rachel bursts in, disheveled and wearing a wedding dress, having just left her fiancé at the altar. She seeks comfort from Monica and confides in Ross and the others about her decision, expressing confusion and anxiety about her
+2026-01-09 10:54:38,849 - KnowledgeGraph - INFO - RAG answer is valid. Updating Knowledge Graph with new information...
+2026-01-09 10:54:42,276 - KnowledgeGraph - INFO - Backfilling Graph: Found 4 nodes and 5 relationships.
+2026-01-09 10:54:43,013 - KnowledgeGraph - INFO - Graph schema refreshed.

@@ -57,3 +57,28 @@ If the answer provides relevant information that addresses the question, return 
 Return ONLY "VALID" or "INVALID".
 """
 )
+
+CYPHER_GENERATION_PROMPT = PromptTemplate(
+    input_variables=["schema", "question"],
+    template="""
+Task: Generate a Cypher query to answer the user's question.
+You are a Neo4j expert.
+
+Schema:
+{schema}
+
+STRICT DATA RULES:
+1. NEVER use the label 'Episode'. It is inconsistent.
+2. The 'video_name' and 'time_steps' are ALWAYS stored as PROPERTIES on RELATIONSHIPS (the edges).
+3. To find an episode or time, you MUST return 'r.video_name' or 'r.time_steps'.
+4. Node IDs use varied casing and full names (e.g., 'Joey Tribbiani', 'Cigarette').
+5. ALWAYS use 'toLower(node.id) CONTAINS toLower("string")' for all name/object/location filters to ensure a match.
+6. MANDATORY: Use a generic relationship `-[r]->` instead of specific types like `-[r:HOLDS]->` to avoid missing matches on synonyms.
+
+Example Questions:
+- Question: "When did Rachel appear in Central Perk?"
+  Query: MATCH (p:Person)-[r]->(l:Location) WHERE toLower(p.id) CONTAINS "rachel" AND toLower(l.id) CONTAINS "central perk" RETURN r.video_name, r.time_steps
+
+Question: {question}
+Cypher Query:"""
+)

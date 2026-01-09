@@ -11,7 +11,7 @@ from llm.factory import LLMFactory
 from preprocessor.helper import chunk_text, get_logger
 from .qdrant_db import QdrantVectorDB
 from .neo4j_client import Neo4jClient
-from .prompts import Answer_Validity_Prompt, Summarize_Group_Video_Chunks
+from .prompts import Answer_Validity_Prompt, Summarize_Group_Video_Chunks, CYPHER_GENERATION_PROMPT
 import time
 
 class KnowledgeGraph:
@@ -20,8 +20,8 @@ class KnowledgeGraph:
         # Initialize Text to Graph Agent
         self.document_to_graph_agent = LLMGraphTransformer(
             llm=self.llm,
-            allowed_nodes=[], 
-            allowed_relationships=[], 
+            allowed_nodes=["Person", "Object", "Action", "Location", "Theme", "Time"], 
+            allowed_relationships=["HOLDING", "VISIBLE_IN", "LOCATED_AT", "PART_OF", "INTERACTS_WITH", "DOING", "HAS_PROPERTY", "APPEARS_IN", "CONTROLS"], 
         )
         
         # Neo4j Client
@@ -211,7 +211,9 @@ class KnowledgeGraph:
             llm=self.llm,
             graph=self.neo4j.graph,
             return_intermediate_steps=True,
-            allow_dangerous_requests=True
+            allow_dangerous_requests=True,
+            verbose=True,
+            cypher_prompt=CYPHER_GENERATION_PROMPT
         )
 
         result = chain.invoke({"query": query})
@@ -231,7 +233,9 @@ class KnowledgeGraph:
             llm=self.llm,
             graph=self.neo4j.graph,
             return_intermediate_steps=True,
-            allow_dangerous_requests=True
+            allow_dangerous_requests=True,
+            verbose=True,
+            cypher_prompt=CYPHER_GENERATION_PROMPT
         )
         result = chain.invoke({"query": query})
         answer = result["result"]
@@ -271,7 +275,11 @@ class KnowledgeGraph:
         # Validate RAG Answer & Update Graph
         if self._validate_answer(query, rag_answer):
             self.logger.info("RAG answer is valid. Updating Knowledge Graph with new information...")
-            self._update_graph(query, rag_answer, context)
+            
+            # Use metadata from the first search result for backfilling
+            primary_metadata = search_results[0].payload if search_results else {}
+            self._update_graph(query, rag_answer, context, primary_metadata)
+            
             result["context"] = context
             result["result"] = rag_answer
 
@@ -287,17 +295,46 @@ class KnowledgeGraph:
         result = chain.invoke({"question": question, "answer": answer})
         return result == "VALID"
 
-    def _update_graph(self, question: str, answer: str, context: str):
+    def _update_graph(self, question: str, answer: str, context: str, metadata: dict = None):
         """
         Extracts new knowledge from the (question, answer) pair and adds it to the graph.
         """
-        text_to_extract = f"Question: {question}\nAnswer: {answer}"
-        documents = [Document(page_content=text_to_extract, metadata={"source": "rag", "context": context})]
+        # Include context in the text to extract so the transformer has enough info to link entities correctly
+        text_to_extract = (
+            f"Based on the following context, extract entities and relationships to update the knowledge graph. "
+            f"Focus on the entities mentioned in the answer and link them based on the context.\n\n"
+            f"Context:\n{context}\n\n"
+            f"Question: {question}\n"
+            f"Answer: {answer}"
+        )
+        # Use provided metadata or extract basic info from context
+        doc_metadata = {"source": "rag"}
+        if metadata:
+            doc_metadata.update({
+                "video_name": metadata.get("video_name", "N/A"),
+                "time_steps": metadata.get("time_steps", "N/A")
+            })
+
+        documents = [Document(page_content=text_to_extract, metadata=doc_metadata)]
         
         graph_documents = self.document_to_graph_agent.convert_to_graph_documents(documents)
         
         if graph_documents:
-            self.logger.info(f"Backfilling Graph: Found {len(graph_documents[0].nodes)} nodes and {len(graph_documents[0].relationships)} relationships.")
+            # Sync metadata to relationships just like in process_chunk
+            for graph_doc in graph_documents:
+                for rel in graph_doc.relationships:
+                    rel.properties["time_steps"] = doc_metadata.get("time_steps", "N/A")
+                    rel.properties["video_name"] = doc_metadata.get("video_name", "N/A")
+                    rel.properties["source"] = "backfill"
+
+            nodes_count = sum(len(d.nodes) for d in graph_documents)
+            rels_count = sum(len(d.relationships) for d in graph_documents)
+            self.logger.info(f"Backfilling Graph: Found {nodes_count} nodes and {rels_count} relationships.")
+            
             self.neo4j.add_graph_documents(graph_documents, include_source=True)
+            
+            # Refresh schema so the Cypher agent can see the new labels/properties
+            self.neo4j.refresh_schema()
+            self.logger.info("Graph schema refreshed.")
         else:
             self.logger.info("Backfilling Graph: No graph data extracted from answer.")
