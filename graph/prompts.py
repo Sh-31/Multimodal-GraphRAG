@@ -61,23 +61,45 @@ Return ONLY "VALID" or "INVALID".
 CYPHER_GENERATION_PROMPT = PromptTemplate(
     input_variables=["schema", "question"],
     template="""
-Task: Generate a Cypher query to answer the user's question.
-You are a Neo4j expert.
+Task: Generate a Cypher query to answer the user's question about video content.
+You are a Neo4j expert specializing in video metadata graphs.
 
 Schema:
 {schema}
 
 STRICT DATA RULES:
-1. NEVER use the label 'Episode'. It is inconsistent.
-2. The 'video_name' and 'time_steps' are ALWAYS stored as PROPERTIES on RELATIONSHIPS (the edges).
-3. To find an episode or time, you MUST return 'r.video_name' or 'r.time_steps'.
-4. Node IDs use varied casing and full names (e.g., 'Joey Tribbiani', 'Cigarette').
-5. ALWAYS use 'toLower(node.id) CONTAINS toLower("string")' for all name/object/location filters to ensure a match.
-6. MANDATORY: Use a generic relationship `-[r]->` instead of specific types like `-[r:HOLDS]->` to avoid missing matches on synonyms.
+1. NO 'EPISODE' NODES: There are NO nodes labeled 'Episode'. Video names are properties of RELATIONS.
+2. METADATA ON EDGES: The properties 'video_name' and 'time_steps' are ALWAYS found on the RELATIONSHIP ([r]).
+3. FUZZY & CASE-INSENSITIVE: Always use 'toLower(node.id) CONTAINS toLower("search_term")' for filtering.
+4. GENERIC RELATIONS: Use generic relationship markers `-[r]->` instead of specific types (like :HOLDS) to capture all variations (HOLDING, HAS, etc.).
+5. MULTI-ENTITY PATHS: For questions involving people, objects, and locations, chain them together: (p:Person)-[r1]->(o:Object)-[r2]->(l:Location).
+6. DEDUPLICATION: Always use 'RETURN DISTINCT' to avoid duplicate answers from multiple video chunks.
 
-Example Questions:
-- Question: "When did Rachel appear in Central Perk?"
-  Query: MATCH (p:Person)-[r]->(l:Location) WHERE toLower(p.id) CONTAINS "rachel" AND toLower(l.id) CONTAINS "central perk" RETURN r.video_name, r.time_steps
+Example Questions & Strategic Cypher:
+
+- "Show me all scenes where Chandler is using a laptop."
+  Query: MATCH (p:Person)-[r1]->(o:Object) 
+         WHERE toLower(p.id) CONTAINS "chandler" 
+         AND toLower(o.id) CONTAINS "laptop" 
+         RETURN DISTINCT r1.video_name, r1.time_steps
+
+- "What location was Ross in when he had a dinosaur bone?"
+  Query: MATCH (p:Person)-[r1]->(o:Object), (p)-[r2]->(l:Location)
+         WHERE toLower(p.id) CONTAINS "ross" 
+         AND toLower(o.id) CONTAINS "dinosaur" 
+         RETURN DISTINCT l.id, r1.video_name
+
+- "In which episodes did we see Gunther at Central Perk?"
+  Query: MATCH (p:Person)-[r]->(l:Location) 
+         WHERE toLower(p.id) CONTAINS "gunther" 
+         AND toLower(l.id) CONTAINS "central perk"
+         RETURN DISTINCT r.video_name
+
+- "Did any character interact with a pizza in a kitchen?"
+  Query: MATCH (p:Person)-[r1]->(o:Object)-[r2]->(l:Location)
+         WHERE toLower(o.id) CONTAINS "pizza"
+         AND toLower(l.id) CONTAINS "kitchen"
+         RETURN DISTINCT p.id, r1.video_name, r1.time_steps
 
 Question: {question}
 Cypher Query:"""

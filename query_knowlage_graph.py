@@ -33,16 +33,15 @@ if __name__ == "__main__":
     query = "What timesteps rachel appeared in wedding dress?"
     answer, result = graph_query(query)
 
-    # query = "which episode did Joey holds a cigarette?"
-    # answer, result = graph_query(query)
+    query = "Which episode did Joey holds a green cup?"
+    answer, result = graph_query(query)
 
-    # query = "Did Rachel change her hairstyle this season or not?"
-    # answer, result = graph_query(query)
+    query = "Did Rachel change her hairstyle this season or not?"
+    answer, result = graph_query(query)
 
-    # query = "What is the most dominant outfit for Ross across the season?"
-    # answer, result = graph_query(query)
+    query = "Who hold Newspaper in Monica’s apartment living room?"
+    answer, result = graph_query(query)
    
-    # query = "What kinds of food did Joey eat across these episodes?"
-    # answer, result = graph_query(query)
-
+    query = "Who killed Phoebe?"
+    answer, result = graph_query(query)
 
