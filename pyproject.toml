@@ -18,4 +18,5 @@ dependencies = [
     "webvtt-py",
     "tqdm",
     "qdrant-client",
+    "faster-whisper"
 ]

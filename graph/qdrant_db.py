@@ -61,7 +61,7 @@ class QdrantVectorDB:
             collection_name=self.collection_name,
             points=points
         )
-        print(f"Indexed {len(chunks)} chunks into Qdrant collection '{self.collection_name}'")
+        return f"Indexed {len(chunks)} chunks into Qdrant collection '{self.collection_name}'"
 
     def search(self, query: str, limit: int = 5):
         embedding = self.embedding_model.embed_query(query)

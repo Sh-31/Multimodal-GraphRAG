@@ -1,0 +1,155 @@
+2026-01-09 04:23:45,577 - KnowledgeGraph - INFO - Processing video: 1x24 - The One Where Rachel Finds Out - group 1/5
+2026-01-09 04:23:49,368 - KnowledgeGraph - INFO - Generated 1 graph documents.
+2026-01-09 04:23:49,368 - KnowledgeGraph - INFO - Extracted 3 nodes and 0 relationships.
+2026-01-09 04:23:49,368 - KnowledgeGraph - INFO - Saving to Neo4j...
+2026-01-09 04:23:51,205 - KnowledgeGraph - INFO - Generated 1 graph documents.
+2026-01-09 04:23:51,205 - KnowledgeGraph - INFO - Extracted 5 nodes and 8 relationships.
+2026-01-09 04:23:51,205 - KnowledgeGraph - INFO - Saving to Neo4j...
+2026-01-09 04:23:53,796 - KnowledgeGraph - INFO - Generated 1 graph documents.
+2026-01-09 04:23:53,796 - KnowledgeGraph - INFO - Extracted 5 nodes and 7 relationships.
+2026-01-09 04:23:53,796 - KnowledgeGraph - INFO - Saving to Neo4j...
+2026-01-09 04:23:54,455 - KnowledgeGraph - INFO - Generated 1 graph documents.
+2026-01-09 04:23:54,455 - KnowledgeGraph - INFO - Extracted 0 nodes and 0 relationships.
+2026-01-09 04:23:54,455 - KnowledgeGraph - INFO - Saving to Neo4j...
+2026-01-09 04:23:57,214 - KnowledgeGraph - INFO - Generated 1 graph documents.
+2026-01-09 04:23:57,214 - KnowledgeGraph - INFO - Extracted 8 nodes and 16 relationships.
+2026-01-09 04:23:57,214 - KnowledgeGraph - INFO - Saving to Neo4j...
+2026-01-09 04:24:00,264 - KnowledgeGraph - INFO - Generated 1 graph documents.
+2026-01-09 04:24:00,264 - KnowledgeGraph - INFO - Extracted 9 nodes and 23 relationships.
+2026-01-09 04:24:00,264 - KnowledgeGraph - INFO - Saving to Neo4j...
+2026-01-09 04:24:03,251 - KnowledgeGraph - INFO - Generated 1 graph documents.
+2026-01-09 04:24:03,251 - KnowledgeGraph - INFO - Extracted 9 nodes and 14 relationships.
+2026-01-09 04:24:03,251 - KnowledgeGraph - INFO - Saving to Neo4j...
+2026-01-09 04:24:06,011 - KnowledgeGraph - INFO - Generated 1 graph documents.
+2026-01-09 04:24:06,012 - KnowledgeGraph - INFO - Extracted 6 nodes and 9 relationships.
+2026-01-09 04:24:06,012 - KnowledgeGraph - INFO - Saving to Neo4j...
+2026-01-09 04:24:07,603 - KnowledgeGraph - INFO - Generated 1 graph documents.
+2026-01-09 04:24:07,603 - KnowledgeGraph - INFO - Extracted 5 nodes and 4 relationships.
+2026-01-09 04:24:07,603 - KnowledgeGraph - INFO - Saving to Neo4j...
+2026-01-09 04:24:08,970 - KnowledgeGraph - INFO - Generated 1 graph documents.
+2026-01-09 04:24:08,970 - KnowledgeGraph - INFO - Extracted 7 nodes and 4 relationships.
+2026-01-09 04:24:08,971 - KnowledgeGraph - INFO - Saving to Neo4j...
+2026-01-09 04:24:09,444 - KnowledgeGraph - INFO - Indexed 10 chunks into Qdrant collection 'multimodal_rag'
+2026-01-09 04:24:10,277 - KnowledgeGraph - INFO - Indexed 28 chunks into Qdrant collection 'multimodal_rag'
+2026-01-09 04:24:10,566 - KnowledgeGraph - INFO - Indexed 8 chunks into Qdrant collection 'multimodal_rag'
+2026-01-09 04:24:10,566 - KnowledgeGraph - INFO - Processing video: 1x24 - The One Where Rachel Finds Out - group 2/5
+2026-01-09 04:24:13,191 - KnowledgeGraph - INFO - Generated 1 graph documents.
+2026-01-09 04:24:13,191 - KnowledgeGraph - INFO - Extracted 5 nodes and 4 relationships.
+2026-01-09 04:24:13,191 - KnowledgeGraph - INFO - Saving to Neo4j...
+2026-01-09 04:24:17,206 - KnowledgeGraph - INFO - Generated 1 graph documents.
+2026-01-09 04:24:17,207 - KnowledgeGraph - INFO - Extracted 6 nodes and 13 relationships.
+2026-01-09 04:24:17,207 - KnowledgeGraph - INFO - Saving to Neo4j...
+2026-01-09 04:24:17,816 - KnowledgeGraph - INFO - Generated 1 graph documents.
+2026-01-09 04:24:17,817 - KnowledgeGraph - INFO - Extracted 1 nodes and 0 relationships.
+2026-01-09 04:24:17,817 - KnowledgeGraph - INFO - Saving to Neo4j...
+2026-01-09 04:24:20,860 - KnowledgeGraph - INFO - Generated 1 graph documents.
+2026-01-09 04:24:20,860 - KnowledgeGraph - INFO - Extracted 9 nodes and 10 relationships.
+2026-01-09 04:24:20,860 - KnowledgeGraph - INFO - Saving to Neo4j...
+2026-01-09 04:24:23,089 - KnowledgeGraph - INFO - Generated 1 graph documents.
+2026-01-09 04:24:23,089 - KnowledgeGraph - INFO - Extracted 7 nodes and 8 relationships.
+2026-01-09 04:24:23,089 - KnowledgeGraph - INFO - Saving to Neo4j...
+2026-01-09 04:24:26,202 - KnowledgeGraph - INFO - Generated 1 graph documents.
+2026-01-09 04:24:26,202 - KnowledgeGraph - INFO - Extracted 8 nodes and 9 relationships.
+2026-01-09 04:24:26,202 - KnowledgeGraph - INFO - Saving to Neo4j...
+2026-01-09 04:24:27,747 - KnowledgeGraph - INFO - Generated 1 graph documents.
+2026-01-09 04:24:27,747 - KnowledgeGraph - INFO - Extracted 4 nodes and 3 relationships.
+2026-01-09 04:24:27,748 - KnowledgeGraph - INFO - Saving to Neo4j...
+2026-01-09 04:24:30,636 - KnowledgeGraph - INFO - Generated 1 graph documents.
+2026-01-09 04:24:30,636 - KnowledgeGraph - INFO - Extracted 8 nodes and 10 relationships.
+2026-01-09 04:24:30,636 - KnowledgeGraph - INFO - Saving to Neo4j...
+2026-01-09 04:24:30,913 - KnowledgeGraph - INFO - Indexed 8 chunks into Qdrant collection 'multimodal_rag'
+2026-01-09 04:24:31,730 - KnowledgeGraph - INFO - Indexed 27 chunks into Qdrant collection 'multimodal_rag'
+2026-01-09 04:24:31,939 - KnowledgeGraph - INFO - Indexed 8 chunks into Qdrant collection 'multimodal_rag'
+2026-01-09 04:24:31,939 - KnowledgeGraph - INFO - Processing video: 1x24 - The One Where Rachel Finds Out - group 3/5
+2026-01-09 04:24:36,488 - KnowledgeGraph - INFO - Generated 1 graph documents.
+2026-01-09 04:24:36,488 - KnowledgeGraph - INFO - Extracted 5 nodes and 4 relationships.
+2026-01-09 04:24:36,488 - KnowledgeGraph - INFO - Saving to Neo4j...
+2026-01-09 04:24:38,051 - KnowledgeGraph - INFO - Generated 1 graph documents.
+2026-01-09 04:24:38,051 - KnowledgeGraph - INFO - Extracted 6 nodes and 3 relationships.
+2026-01-09 04:24:38,051 - KnowledgeGraph - INFO - Saving to Neo4j...
+2026-01-09 04:24:38,693 - KnowledgeGraph - INFO - Generated 1 graph documents.
+2026-01-09 04:24:38,693 - KnowledgeGraph - INFO - Extracted 0 nodes and 0 relationships.
+2026-01-09 04:24:38,693 - KnowledgeGraph - INFO - Saving to Neo4j...
+2026-01-09 04:24:41,061 - KnowledgeGraph - INFO - Generated 1 graph documents.
+2026-01-09 04:24:41,061 - KnowledgeGraph - INFO - Extracted 8 nodes and 11 relationships.
+2026-01-09 04:24:41,061 - KnowledgeGraph - INFO - Saving to Neo4j...
+2026-01-09 04:24:42,941 - KnowledgeGraph - INFO - Generated 1 graph documents.
+2026-01-09 04:24:42,941 - KnowledgeGraph - INFO - Extracted 8 nodes and 9 relationships.
+2026-01-09 04:24:42,942 - KnowledgeGraph - INFO - Saving to Neo4j...
+2026-01-09 04:24:44,957 - KnowledgeGraph - INFO - Generated 1 graph documents.
+2026-01-09 04:24:44,957 - KnowledgeGraph - INFO - Extracted 6 nodes and 5 relationships.
+2026-01-09 04:24:44,957 - KnowledgeGraph - INFO - Saving to Neo4j...
+2026-01-09 04:24:47,209 - KnowledgeGraph - INFO - Generated 1 graph documents.
+2026-01-09 04:24:47,209 - KnowledgeGraph - INFO - Extracted 4 nodes and 6 relationships.
+2026-01-09 04:24:47,209 - KnowledgeGraph - INFO - Saving to Neo4j...
+2026-01-09 04:24:49,688 - KnowledgeGraph - INFO - Generated 1 graph documents.
+2026-01-09 04:24:49,689 - KnowledgeGraph - INFO - Extracted 9 nodes and 7 relationships.
+2026-01-09 04:24:49,689 - KnowledgeGraph - INFO - Saving to Neo4j...
+2026-01-09 04:24:52,148 - KnowledgeGraph - INFO - Generated 1 graph documents.
+2026-01-09 04:24:52,148 - KnowledgeGraph - INFO - Extracted 6 nodes and 6 relationships.
+2026-01-09 04:24:52,148 - KnowledgeGraph - INFO - Saving to Neo4j...
+2026-01-09 04:24:52,443 - KnowledgeGraph - INFO - Indexed 9 chunks into Qdrant collection 'multimodal_rag'
+2026-01-09 04:24:53,010 - KnowledgeGraph - INFO - Indexed 24 chunks into Qdrant collection 'multimodal_rag'
+2026-01-09 04:24:53,270 - KnowledgeGraph - INFO - Indexed 11 chunks into Qdrant collection 'multimodal_rag'
+2026-01-09 04:24:53,271 - KnowledgeGraph - INFO - Processing video: 1x24 - The One Where Rachel Finds Out - group 4/5
+2026-01-09 04:24:58,511 - KnowledgeGraph - INFO - Generated 1 graph documents.
+2026-01-09 04:24:58,511 - KnowledgeGraph - INFO - Extracted 5 nodes and 4 relationships.
+2026-01-09 04:24:58,512 - KnowledgeGraph - INFO - Saving to Neo4j...
+2026-01-09 04:25:00,198 - KnowledgeGraph - INFO - Generated 1 graph documents.
+2026-01-09 04:25:00,198 - KnowledgeGraph - INFO - Extracted 5 nodes and 4 relationships.
+2026-01-09 04:25:00,199 - KnowledgeGraph - INFO - Saving to Neo4j...
+2026-01-09 04:25:01,754 - KnowledgeGraph - INFO - Generated 1 graph documents.
+2026-01-09 04:25:01,754 - KnowledgeGraph - INFO - Extracted 6 nodes and 3 relationships.
+2026-01-09 04:25:01,754 - KnowledgeGraph - INFO - Saving to Neo4j...
+2026-01-09 04:25:02,367 - KnowledgeGraph - INFO - Generated 1 graph documents.
+2026-01-09 04:25:02,367 - KnowledgeGraph - INFO - Extracted 0 nodes and 0 relationships.
+2026-01-09 04:25:02,367 - KnowledgeGraph - INFO - Saving to Neo4j...
+2026-01-09 04:25:04,806 - KnowledgeGraph - INFO - Generated 1 graph documents.
+2026-01-09 04:25:04,806 - KnowledgeGraph - INFO - Extracted 8 nodes and 8 relationships.
+2026-01-09 04:25:04,806 - KnowledgeGraph - INFO - Saving to Neo4j...
+2026-01-09 04:25:07,992 - KnowledgeGraph - INFO - Generated 1 graph documents.
+2026-01-09 04:25:07,992 - KnowledgeGraph - INFO - Extracted 12 nodes and 9 relationships.
+2026-01-09 04:25:07,992 - KnowledgeGraph - INFO - Saving to Neo4j...
+2026-01-09 04:25:09,865 - KnowledgeGraph - INFO - Generated 1 graph documents.
+2026-01-09 04:25:09,865 - KnowledgeGraph - INFO - Extracted 10 nodes and 11 relationships.
+2026-01-09 04:25:09,865 - KnowledgeGraph - INFO - Saving to Neo4j...
+2026-01-09 04:25:11,092 - KnowledgeGraph - INFO - Generated 1 graph documents.
+2026-01-09 04:25:11,092 - KnowledgeGraph - INFO - Extracted 2 nodes and 2 relationships.
+2026-01-09 04:25:11,092 - KnowledgeGraph - INFO - Saving to Neo4j...
+2026-01-09 04:25:13,082 - KnowledgeGraph - INFO - Generated 1 graph documents.
+2026-01-09 04:25:13,082 - KnowledgeGraph - INFO - Extracted 6 nodes and 11 relationships.
+2026-01-09 04:25:13,082 - KnowledgeGraph - INFO - Saving to Neo4j...
+2026-01-09 04:25:17,216 - KnowledgeGraph - INFO - Generated 1 graph documents.
+2026-01-09 04:25:17,216 - KnowledgeGraph - INFO - Extracted 13 nodes and 11 relationships.
+2026-01-09 04:25:17,216 - KnowledgeGraph - INFO - Saving to Neo4j...
+2026-01-09 04:25:17,573 - KnowledgeGraph - INFO - Indexed 10 chunks into Qdrant collection 'multimodal_rag'
+2026-01-09 04:25:17,983 - KnowledgeGraph - INFO - Indexed 20 chunks into Qdrant collection 'multimodal_rag'
+2026-01-09 04:25:18,238 - KnowledgeGraph - INFO - Indexed 11 chunks into Qdrant collection 'multimodal_rag'
+2026-01-09 04:25:18,238 - KnowledgeGraph - INFO - Processing video: 1x24 - The One Where Rachel Finds Out - group 5/5
+2026-01-09 04:25:21,960 - KnowledgeGraph - INFO - Generated 1 graph documents.
+2026-01-09 04:25:21,961 - KnowledgeGraph - INFO - Extracted 4 nodes and 3 relationships.
+2026-01-09 04:25:21,961 - KnowledgeGraph - INFO - Saving to Neo4j...
+2026-01-09 04:25:23,647 - KnowledgeGraph - INFO - Generated 1 graph documents.
+2026-01-09 04:25:23,647 - KnowledgeGraph - INFO - Extracted 5 nodes and 5 relationships.
+2026-01-09 04:25:23,647 - KnowledgeGraph - INFO - Saving to Neo4j...
+2026-01-09 04:25:24,381 - KnowledgeGraph - INFO - Generated 1 graph documents.
+2026-01-09 04:25:24,381 - KnowledgeGraph - INFO - Extracted 0 nodes and 0 relationships.
+2026-01-09 04:25:24,381 - KnowledgeGraph - INFO - Saving to Neo4j...
+2026-01-09 04:25:26,674 - KnowledgeGraph - INFO - Generated 1 graph documents.
+2026-01-09 04:25:26,674 - KnowledgeGraph - INFO - Extracted 6 nodes and 8 relationships.
+2026-01-09 04:25:26,674 - KnowledgeGraph - INFO - Saving to Neo4j...
+2026-01-09 04:25:28,631 - KnowledgeGraph - INFO - Generated 1 graph documents.
+2026-01-09 04:25:28,631 - KnowledgeGraph - INFO - Extracted 9 nodes and 9 relationships.
+2026-01-09 04:25:28,631 - KnowledgeGraph - INFO - Saving to Neo4j...
+2026-01-09 04:25:31,939 - KnowledgeGraph - INFO - Generated 1 graph documents.
+2026-01-09 04:25:31,940 - KnowledgeGraph - INFO - Extracted 12 nodes and 13 relationships.
+2026-01-09 04:25:31,940 - KnowledgeGraph - INFO - Saving to Neo4j...
+2026-01-09 04:25:36,494 - KnowledgeGraph - INFO - Generated 1 graph documents.
+2026-01-09 04:25:36,494 - KnowledgeGraph - INFO - Extracted 17 nodes and 16 relationships.
+2026-01-09 04:25:36,494 - KnowledgeGraph - INFO - Saving to Neo4j...
+2026-01-09 04:25:37,383 - KnowledgeGraph - INFO - Generated 1 graph documents.
+2026-01-09 04:25:37,383 - KnowledgeGraph - INFO - Extracted 4 nodes and 3 relationships.
+2026-01-09 04:25:37,383 - KnowledgeGraph - INFO - Saving to Neo4j...
+2026-01-09 04:25:37,562 - KnowledgeGraph - INFO - Indexed 8 chunks into Qdrant collection 'multimodal_rag'
+2026-01-09 04:25:37,956 - KnowledgeGraph - INFO - Indexed 19 chunks into Qdrant collection 'multimodal_rag'
+2026-01-09 04:25:38,035 - KnowledgeGraph - INFO - Indexed 3 chunks into Qdrant collection 'multimodal_rag'

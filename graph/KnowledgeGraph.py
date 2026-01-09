@@ -12,6 +12,7 @@ from preprocessor.helper import chunk_text, get_logger
 from .qdrant_db import QdrantVectorDB
 from .neo4j_client import Neo4jClient
 from .prompts import Answer_Validity_Prompt, Summarize_Group_Video_Chunks
+import time
 
 class KnowledgeGraph:
     def __init__(self, llm, collection_name="multimodal_rag"):
@@ -89,7 +90,8 @@ class KnowledgeGraph:
                    self.process_chunk(cap, metadata)
                    metadatas.append(metadata)
            
-           self.vector_db.index_chunks(chunks, metadatas=metadatas)
+           log_index_vector_db = self.vector_db.index_chunks(chunks, metadatas=metadatas)
+           self.logger.info(log_index_vector_db)
            return 
            
         chunks = []
@@ -106,7 +108,11 @@ class KnowledgeGraph:
         merged_chunks_jsons = []
         for i, merged_chunk in enumerate(merged_chunks):
             video_name = merged_chunk[0]['episode']
+            self.logger.info(f"Processing video: {video_name} - group {i+1}/{len(merged_chunks)}")
             merged_chunks_capution = f"Episode name: {video_name}\n"
+            
+            # # add 1 min delay between chunks
+            # time.sleep(60)
             
             for j, chunk in enumerate(merged_chunk):
                 merged_chunks_capution += f"Chunk {j+1}:\n, time_steps: {chunk['start_chunk']} - {chunk['end_chunk']}\n{chunk['caption']}\n"
@@ -136,7 +142,8 @@ class KnowledgeGraph:
                     summary_metadata
                 )
 
-            self.vector_db.index_chunks(summary_chunks, metadatas=summary_metadatas)
+            log_index_vector_db = self.vector_db.index_chunks(summary_chunks, metadatas=summary_metadatas)
+            self.logger.info(log_index_vector_db)
 
             # Index Individual Chunks and subtitles to Vector DB
             group_chunks_captions = []
@@ -172,8 +179,10 @@ class KnowledgeGraph:
                         "time_steps": f"{chunk['start_chunk']} - {chunk['end_chunk']}"
                     })
             
-            self.vector_db.index_chunks(group_chunks_captions, metadatas=group_chunks_caption_metadatas)
-            self.vector_db.index_chunks(group_chunks_subtitles, metadatas=group_chunks_subtitle_metadatas)
+            log_index_vector_db = self.vector_db.index_chunks(group_chunks_captions, metadatas=group_chunks_caption_metadatas)
+            self.logger.info(log_index_vector_db)
+            log_index_vector_db = self.vector_db.index_chunks(group_chunks_subtitles, metadatas=group_chunks_subtitle_metadatas)
+            self.logger.info(log_index_vector_db)
 
             # dict for merged chunks with summary
             merged_chunks_json = {}

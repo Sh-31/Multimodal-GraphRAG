@@ -1,3 +1,7 @@
+# Need to install vllm and qwen-vl-utils
+# uv pip install qwen-vl-utils==0.0.14
+# Install vLLM >=0.11.0
+
 import os
 import re
 import json

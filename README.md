@@ -63,6 +63,8 @@ Multimodal-GraphRAG/
 
 ### 1. Video Preprocessing
 
+![](docs/Multimodel-GraphRag-Page-1.drawio.png)
+
 - **Splitting Long Video**: Long videos are automatically split into 1-minute clips using `ffmpeg` for efficiency without re-encoding.
 - **Subtitle Alignment**: The system loads existing subtitle files (VTT/SRT) and aligns them with each video chunk.
   - Note: If subtitles are missing, the system can use ASR models (like Whisper) as a fallback.
@@ -79,6 +81,8 @@ Multimodal-GraphRAG/
 
 ### 3. Data Indexing and Graph Construction
 
+![](docs/Multimodel-GraphRag-Page-2.drawio.png)
+
 The system utilizes agents from LangChain to bridge the gap between natural language and graph databases:
 
 - **LLMGraphTransformer**: This agent acts as a text-to-graph. It processes the generated captions and summaries, extracting entities and relationships to convert them into a structured format compatible with **Cypher Query Language**. This enables the seamless feeding of unstructured video descriptions into the Neo4j graph database.
@@ -87,6 +91,8 @@ The system utilizes agents from LangChain to bridge the gap between natural lang
 ### 4. Hybrid Query-Aware Retrieval
 
 The retrieval process is done by a hybrid approach that combines semantic search with graph-based reasoning:
+
+![](docs/Multimodel-GraphRag-Page-3.drawio.png)
 
 - **GraphCypherQAChain**: This agent used for the retrieval phase. It takes a natural language user query and converts it into a valid **Cypher query**. This allows the system to retrieve precise information directly from the Neo4j knowledge graph based on the structured relationships indexed earlier.
 - **Hybrid Logic**:

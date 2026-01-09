@@ -28,6 +28,8 @@ def index_data():
     for video_name in videos_names:
         video_path = videos_dir / video_name
         
+        if video_name != "1x24 - The One Where Rachel Finds Out":
+            continue
         print(f"Processing video: {video_name}")
         with open(video_path / "all_captions.json", "r") as f:
             all_captions = json.load(f)
@@ -38,6 +40,12 @@ def index_data():
                 chunk_subtitles = json.load(f)
 
             chunk_subtitles = chunk_subtitles["subtitles_with_timestamps"]
+            
+            if len(chunk_subtitles) == 0:
+                all_captions[chunk]["start_chunk"] = ""
+                all_captions[chunk]["end_chunk"] = ""
+                continue
+            
             start_of_chunk = seconds_to_time(chunk_subtitles[0]["start"])
             end_of_chunk = seconds_to_time(chunk_subtitles[-1]["end"])
 
@@ -50,7 +58,5 @@ def index_data():
            with open(video_path / f"merged_chunks_{i}.json", "w") as f:
                 json.dump(merged_chunks_json, f, indent=2)
         
-        break
-
 if __name__ == "__main__":
     index_data()

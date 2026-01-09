@@ -1,0 +1,9 @@
+Importent links:
+
+- https://moviebox.ph/
+- https://drive.google.com/drive/folders/1QOZJjXVXnaNSbjlENRHmUtx-lKgoFGIw?usp=sharing
+- https://drive.google.com/drive/folders/1JqyfZKdkhmgymOVxZbfePG6XqQGUGoZF
+
+
+- https://github.com/langchain-ai/langchain-neo4j/tree/main/libs/neo4j
+- https://github.com/langchain-ai/langchain-experimental/blob/main/libs/experimental/langchain_experimental/graph_transformers/llm.py#L185

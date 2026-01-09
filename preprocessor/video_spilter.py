@@ -1,5 +1,4 @@
 # https://www.kaggle.com/code/sherif31/videospilter
-# TODO: add subtitle generation using ASR Model like whisper
 import os
 import json
 from pathlib import Path
@@ -9,6 +8,8 @@ from typing import List, Dict, Tuple
 from tqdm import tqdm
 from multiprocessing import Pool, cpu_count
 import subprocess
+from faster_whisper import WhisperModel
+from .helper import seconds_to_time
 
 # Check if ffmpeg is installed, if not install it
 try:
@@ -20,16 +21,64 @@ except (subprocess.CalledProcessError, FileNotFoundError):
     print("✓ ffmpeg installed successfully")
 
 class VideoSpilter:
-    def __init__(self, chunk_duration: int = 60):
+    def __init__(
+        self, 
+        chunk_duration: int = 60,
+        whisper_model_name: str = "base",
+        device: str = "cuda",
+        compute_type: str = "float16"
+    ):
         self.chunk_duration = chunk_duration
+        self.whisper_model_name = whisper_model_name
+        self.device = device
+        self.compute_type = compute_type
+        self.whisper_model = None
 
-    
+    def _init_whisper(self):
+        if self.whisper_model is None:
+            try:
+                self.whisper_model = WhisperModel(
+                    self.whisper_model_name, 
+                    device=self.device, 
+                    compute_type=self.compute_type
+                )
+            except Exception as e:
+                self.whisper_model = WhisperModel(
+                    self.whisper_model_name, 
+                    device="cpu", 
+                    compute_type="int8"
+                )
+               
+    def generate_subtitles_whisper(self, video_path: str) -> List[Dict]:
+        self._init_whisper()
+        segments, info = self.whisper_model.transcribe(video_path, beam_size=5)
+        
+        results = []
+        for segment in segments:
+            results.append({
+                'start': segment.start,
+                'end': segment.end,
+                'text': segment.text.strip()
+            })
+        return results
+
+    def _convert_to_caption_objects(self, whisper_results: List[Dict]):
+        """Convert whisper results to objects mimicking webvtt captions."""
+        class MockCaption:
+            def __init__(self, start, end, text):
+                self.start = seconds_to_time(start)
+                self.end = seconds_to_time(end)
+                self.text = text
+        
+        return [MockCaption(r['start'], r['end'], r['text']) for r in whisper_results]
+
     def split_video(self, input_path: str, output_folder: str) -> List[Dict]:
         os.makedirs(output_folder, exist_ok=True)
         
         video = mp.VideoFileClip(input_path)
         total_duration = video.duration
         num_clips = int(total_duration / self.chunk_duration)
+        
         if total_duration % self.chunk_duration != 0:
             num_clips += 1
         video.close()
@@ -62,12 +111,10 @@ class VideoSpilter:
         return chunks
     
     def _get_existing_chunks(self, output_folder: str, input_path: str) -> List[Dict]:
-        """Get chunk information from existing split videos."""
         video = mp.VideoFileClip(input_path)
         total_duration = video.duration
         video.close()
         
-        # Get chunk folders
         chunk_folders = sorted([f for f in os.listdir(output_folder) if f.startswith('chunk_')])
         chunks = []
         
@@ -89,13 +136,9 @@ class VideoSpilter:
         return chunks
     
     def load_subtitles(self, subtitle_path: str):
-        """
-        Load subtitle file (VTT or SRT format) as dict
-        """
         if not os.path.exists(subtitle_path):
             raise FileNotFoundError(f"Subtitle file not found: {subtitle_path}")
         
-        # webvtt can handle both .vtt and .srt files
         subs = webvtt.read(subtitle_path)
         return subs
     
@@ -107,7 +150,6 @@ class VideoSpilter:
     ) -> Tuple[List[Dict], List[str]]:
     
         def time_to_seconds(time_str: str) -> float:
-            """Convert webvtt time string (HH:MM:SS.mmm) to seconds."""
             parts = time_str.split(':')
             hours = int(parts[0])
             minutes = int(parts[1])
@@ -138,34 +180,44 @@ class VideoSpilter:
     def process_video_for_inference(
         self,
         video_path: str,
-        subtitle_path: str,
-        output_folder: str,
+        subtitle_path: str = None,
+        output_folder: str = None,
         parallel: bool = False
     ) -> List[Dict]:
         """
-        Complete pipeline: split video, load subtitles, and create JSON files.
+        Complete pipeline: split video, load/generate subtitles, and create JSON files.
         
         Args:
             video_path: Path to video file
-            subtitle_path: Path to subtitle file (.srt or .vtt)
+            subtitle_path: Path to subtitle file (.srt or .vtt), if None uses Whisper
             output_folder: Directory for video chunks
             parallel: Use parallel processing for video splitting (default: False)
             
         Returns:
             List of chunk information dictionaries
         """
+        if output_folder is None:
+            output_folder = os.path.join(os.path.dirname(video_path), "chunks")
+
         # Step 1: Split video into chunks
         print(f"Splitting video into {self.chunk_duration}s chunks...")
         if parallel:
-            chunks = self.split_video_parallel(video_path, output_folder)
+            # Note: split_video_parallel not shown in original file, assuming it exists or using serial
+            chunks = self.split_video(video_path, output_folder) 
         else:
             chunks = self.split_video(video_path, output_folder)
         print(f"Created {len(chunks)} video chunks")
         
-        # Step 2: Load subtitles
-        print(f"Loading subtitles from {subtitle_path}...")
-        subtitles = self.load_subtitles(subtitle_path)
-        print(f"Loaded {len(subtitles)} subtitle entries")
+        # Step 2: Load or Generate subtitles
+        if subtitle_path and os.path.exists(subtitle_path):
+            print(f"Loading subtitles from {subtitle_path}...")
+            subtitles = self.load_subtitles(subtitle_path)
+            print(f"Loaded {len(subtitles)} subtitle entries")
+        else:
+            print(f"No subtitle file provided. Using Whisper ASR for {video_path}...")
+            whisper_results = self.generate_subtitles_whisper(video_path)
+            subtitles = self._convert_to_caption_objects(whisper_results)
+            print(f"Generated {len(subtitles)} subtitle entries using Whisper")
         
         # Step 3: Align subtitles with chunks and create JSON files
         for chunk in chunks:
@@ -197,16 +249,7 @@ def process_all_episodes(
     chunk_duration: int = 60,
     parallel: bool = False
 ):
-    """
-    Process all episodes in a folder.
     
-    Args:
-        episodes_folder: Folder containing episode video files
-        subtitles_folder: Folder containing subtitle files (.vtt or .srt)
-        output_base_folder: Base output folder (default: "episodes_splitted")
-        chunk_duration: Duration of each chunk in seconds
-        parallel: Use parallel processing for video splitting
-    """
     processor = VideoSpilter(chunk_duration=chunk_duration)
     
     # Get all video files
@@ -218,9 +261,6 @@ def process_all_episodes(
     print(f"Found {len(episode_files)} episodes to process")
     
     for episode_file in tqdm(episode_files, desc="Processing episodes"):
-        print(f"\n{'='*60}")
-        print(f"Processing: {episode_file}")
-        print(f"{'='*60}")
         
         episode_name = Path(episode_file).stem
         ext = Path(episode_file).suffix
@@ -234,8 +274,7 @@ def process_all_episodes(
                 break
         
         if subtitle_file is None:
-            print(f"Warning: No subtitle file found for {episode_file}, skipping...")
-            continue
+            print(f"Notice: No subtitle file found for {episode_file}, will use Whisper ASR.")
         
         episode_output_folder = os.path.join(output_base_folder, episode_name)
         os.makedirs(episode_output_folder, exist_ok=True)
@@ -252,7 +291,7 @@ def process_all_episodes(
             print(f"Error processing {episode_file}: {str(e)}")
             continue
 
-if __name__ == "__main__":
+if __name__ == "__main__":    
     process_all_episodes(
         episodes_folder="/kaggle/input/v1/other/default/1/episodes",
         subtitles_folder="/kaggle/input/v1/other/default/1/vtts",

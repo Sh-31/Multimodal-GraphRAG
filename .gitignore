@@ -13,4 +13,4 @@ wheels/
 db_data/neo4j_db/*
 db_data/qdrant_db/*
 
-docs/*
+docs/Interview Task.pdf
