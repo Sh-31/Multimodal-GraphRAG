@@ -1,0 +1,95 @@
+2026-01-09 13:46:42,738 - KnowledgeGraph - INFO - Querying: What timesteps rachel appeared in wedding dress?
+2026-01-09 13:46:49,841 - KnowledgeGraph - INFO - Graph answer ('I don't know the answer.') insufficient/invalid, falling back to Vector DB...
+2026-01-09 13:46:50,054 - KnowledgeGraph - INFO - Context retrieved from Vector DB:
+2026-01-09 13:46:50,055 - KnowledgeGraph - INFO - Video: 1x01 - The One Where Monica Gets A Roommate 
+Time: 00:09:59.140 - 00:14:57.478
+Content: *   **Emotional Tone:** The narrative shifts between frustration (Ross), awkwardness and tension (Monica and Chandler's restaurant conversation), distress (Rachel with the wedding dress), and casual camaraderie (morning coffee chat).
+*   **Plot Setup:** Monica's revelation about her ex and her subsequent sexual difficulties sets up a significant plot point. Rachel's distress with the wedding dress suggests a major life event or change.
+---
+Video: 1x01 - The One Where Monica Gets A Roommate 
+Time: 00:00:47.881 - 00:05:02.718
+Content: becomes more dramatic when Rachel bursts in, disheveled and wearing a wedding dress, having just left her fiancé at the altar. She seeks comfort from Monica and confides in Ross and the others about her decision, expressing confusion and anxiety about her feelings and her fiancé, Barry. The friends offer support and listen intently to Rachel's emotional crisis.
+---
+Video: 1x01 - The One Where Monica Gets A Roommate 
+Time: 00:00:47.881 - 00:05:02.718
+Content: The group is gathered at Central Perk, initially engaged in casual conversation where Ross discusses a coworker and Monica shares a dream about her mother. The mood shifts as Ross reveals his ex-wife Carol is moving out, causing tension. The atmosphere becomes more dramatic when Rachel bursts in, disheveled and wearing a wedding dress, having just left her fiancé at the altar. She seeks comfort from Monica and confides in Ross and the others about her decision, expressing confusion and anxiety about her
+2026-01-09 13:46:54,548 - KnowledgeGraph - INFO - RAG answer is valid. Updating Knowledge Graph with new information...
+2026-01-09 13:47:13,938 - KnowledgeGraph - INFO - Backfilling Graph: Found 3 nodes and 2 relationships.
+2026-01-09 13:47:15,961 - KnowledgeGraph - INFO - Graph schema refreshed.
+2026-01-09 13:47:17,815 - KnowledgeGraph - INFO - Querying: Which episode did Joey holds a green cup?
+2026-01-09 13:47:31,234 - KnowledgeGraph - INFO - Graph answer ('I don't know the answer.') insufficient/invalid, falling back to Vector DB...
+2026-01-09 13:47:31,263 - KnowledgeGraph - INFO - Context retrieved from Vector DB:
+2026-01-09 13:47:31,263 - KnowledgeGraph - INFO - Video: 1x17 - The One With Two Parts (2)
+Time: 00:15:04.737 - 00:20:01.866
+Content: The episode begins in Central Perk where Phoebe is animatedly discussing a birthday present, a scarf from "Hemingway's" and a "Judy Jetson Thermos," with an unidentified blonde companion. Later, Phoebe continues this conversation, referencing Joey's intense feelings for her companion. Meanwhile, Monica and Rachel are at a counter, discussing paperwork, before transitioning to a scene in a living room where Ross and Chandler are having a serious, tense conversation. Their discussion is interrupted by a
+---
+Video: 1x13 - The One With The Boobies
+Time: 00:14:59.899 - 00:19:59.739
+Content: The episode opens with Rachel discovering a shirtless man in Monica's bathroom, causing her surprise and annoyance, which Chandler finds amusing. The group then congregates at Central Perk, where conversations flow casually, with Monica being animated and Chandler expressing his dislike for someone named Roger. The scene shifts to the apartment in the evening, where Joey has an animated conversation with an unidentified woman who discusses her father and a past relationship, conveying a mix of seriousness
+---
+Video: 1x17 - The One With Two Parts (2)
+Time: 00:19:58.739 - 00:22:21.672
+Content: The episode opens in Central Perk, where Joey kisses Phoebe on the cheek, leaving her shocked and him walking away. The scene then transitions to a hospital room where Ross, Chandler, Rachel, Joey, and Phoebe gather, concerned about an unidentified person and later revealed to be a monkey recovering from surgery. Ross explains the monkey's condition to the worried group. Finally, the scene shifts to Monica's apartment, where Monica, Rachel, Chandler, Joey, and Phoebe are all present, engaged in a
+2026-01-09 13:47:36,152 - KnowledgeGraph - INFO - Querying: Did Rachel change her hairstyle this season or not?
+2026-01-09 13:47:42,528 - KnowledgeGraph - INFO - Graph answer ('I don't know the answer.') insufficient/invalid, falling back to Vector DB...
+2026-01-09 13:47:42,565 - KnowledgeGraph - INFO - Context retrieved from Vector DB:
+2026-01-09 13:47:42,566 - KnowledgeGraph - INFO - Video: 1x23 - The One With The Birth
+Time: 00:21:01.009 - 00:21:59.984
+Content: Rachel Green: dark-colored top — unclear lower clothing — brown, shoulder-length hair — expression shifts from neutral to concerned
+Monica Geller: dark-colored top — unclear lower clothing — dark, shoulder-length hair — expression shifts from neutral to concerned
+Phoebe Buffay: dark-colored top — unclear lower clothing — blonde, shoulder-length hair — expression shifts from neutral to concerned
+---
+Video: 1x12 - The One with the Dozen Lasagnas
+Time: 00:15:00.232 - 00:15:59.832
+Content: ### **SCENE SETTING:**
+The living room of Monica and Rachel's apartment — evening, warm ambient lighting from lamps and a visible candle.
+
+### **CHARACTERS PRESENT:**
+Rachel Green: light-colored patterned dress - unclear lower clothing - long, wavy brown hair tied back with a hair clip - expression shifts from animated to concerned
+Phoebe Buffay: dark-colored sweater over a dark top - long, blonde hair in a half-up style with a hair clip - expression animated and concerned
+---
+Video: 1x01 - The One Where Monica Gets A Roommate 
+Time: 00:08:59.372 - 00:10:01.558
+Content: Rachel Green: white off-the-shoulder dress - pearl necklace - long, brown, wavy hair - expression shifts from concerned to annoyed
+Chandler Bing: dark leather jacket - dark shirt underneath - dark, medium-length hair - expression: relaxed, smiling
+Joey Tribbiani: white short-sleeved shirt with dark vest - blue jeans - dark, medium-length hair - expression: animated, talking
+Phoebe Buffay: denim vest over a patterned top - long, blonde, straight hair - expression: confused, gesturing
+2026-01-09 13:47:46,331 - KnowledgeGraph - INFO - RAG answer is valid. Updating Knowledge Graph with new information...
+2026-01-09 13:47:52,339 - KnowledgeGraph - INFO - Backfilling Graph: Found 7 nodes and 10 relationships.
+2026-01-09 13:47:53,711 - KnowledgeGraph - INFO - Graph schema refreshed.
+2026-01-09 13:47:55,634 - KnowledgeGraph - INFO - Querying: Who hold Newspaper in Monica’s apartment living room?
+2026-01-09 13:48:16,448 - KnowledgeGraph - INFO - Graph answer ('I don't know the answer.') insufficient/invalid, falling back to Vector DB...
+2026-01-09 13:48:16,480 - KnowledgeGraph - INFO - Context retrieved from Vector DB:
+2026-01-09 13:48:16,481 - KnowledgeGraph - INFO - Video: 1x07 - The One With The Blackout
+Time: 00:00:02.043 - 00:05:00.632
+Content: Monica's apartment, with some members of the group expressing concern while others seem amused. The narrative then splits: Chandler is shown in a bank vestibule, interacting with a bank teller named Jill Goodacre, while the rest of the group is back in the apartment. In the apartment, Joey arrives holding a menorah and discusses officiating a Hanukkah ceremony during the blackout. The group gathers by a window, reacting to the outside situation with surprise and concern.
+---
+Video: 1x11 - The One With Mrs. Bing
+Time: 00:12:57.777 - 00:13:59.838
+Content: ### **SCENE SETTING:**
+Monica’s apartment living room — daytime, warm indoor lighting
+The scene features a living room with a brown leather chair, a television, a bookshelf, and a kitchen area visible in the background. Decor includes a poster on the wall and a clown-faced mug on a counter.
+---
+Video: 1x12 - The One with the Dozen Lasagnas
+Time: 00:00:10.844 - 00:05:02.509
+Content: *   **Notable transitions between locations or conversations:** The shift from the public space of Central Perk to the private setting of Monica's apartment marks a significant change in the episode's focus. The movement between Monica's kitchen and living room, and later the involvement of Ross and Joey in managing the lasagnas outside the apartment, illustrates the escalating nature of the situation.
+2026-01-09 13:48:20,882 - KnowledgeGraph - INFO - Querying: Show me all scenes where Phoebe and Ross are also seated nearby
+2026-01-09 13:48:28,591 - KnowledgeGraph - INFO - Graph answer ('I don't know the answer.') insufficient/invalid, falling back to Vector DB...
+2026-01-09 13:48:28,625 - KnowledgeGraph - INFO - Context retrieved from Vector DB:
+2026-01-09 13:48:28,626 - KnowledgeGraph - INFO - Video: 1x10 - The One with the Monkey
+Time: 00:21:58.775 - 00:22:34.810
+Content: ### **TEMPORAL NOTES:**
+Scene begins with Ross and Rachel standing near the counter, then Chandler joins them. Joey remains seated at the table throughout. Phoebe stays seated near the couch. The group’s positions remain relatively static, with only minor shifts in posture and gestures.
+---
+Video: 1x07 - The One With The Blackout
+Time: 00:06:00.693 - 00:07:02.921
+Content: ### **TEMPORAL NOTES:**
+Scene begins with Joey and Monica seated on the couch. Ross and Rachel sit across from them. Phoebe joins the group, sitting nearby. The group remains seated throughout the clip, with minor shifts in posture and gestures.
+---
+Video: 1x05 - The One With The East German Laundry Detergent
+Time: 00:21:58.483 - 00:22:34.268
+Content: ### **ACTIONS AND INTERACTIONS:**
+Rachel sits on the couch, holding a blue ice pack on Ross's head while speaking to him. Ross sits beside her, looking up at her with a surprised expression. Phoebe sits next to Ross, holding a pink cloth and smiling as she watches the interaction. The scene includes background activity with other patrons moving around the coffee shop.
+2026-01-09 13:48:33,398 - KnowledgeGraph - INFO - RAG answer is valid. Updating Knowledge Graph with new information...
+2026-01-09 13:48:38,263 - KnowledgeGraph - INFO - Backfilling Graph: Found 4 nodes and 6 relationships.
+2026-01-09 13:48:39,090 - KnowledgeGraph - INFO - Graph schema refreshed.

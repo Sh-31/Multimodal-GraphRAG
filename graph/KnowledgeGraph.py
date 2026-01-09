@@ -20,8 +20,8 @@ class KnowledgeGraph:
         # Initialize Text to Graph Agent
         self.document_to_graph_agent = LLMGraphTransformer(
             llm=self.llm,
-            allowed_nodes=["Person", "Object", "Action", "Location", "Theme", "Time"], 
-            allowed_relationships=["HOLDING", "VISIBLE_IN", "LOCATED_AT", "PART_OF", "INTERACTS_WITH", "DOING", "HAS_PROPERTY", "APPEARS_IN", "CONTROLS"], 
+            allowed_nodes=[], 
+            allowed_relationships=[], 
         )
         
         # Neo4j Client
@@ -272,13 +272,22 @@ class KnowledgeGraph:
         response = chain.invoke({"context": context, "question": query})
         rag_answer = response.content
             
-        # Validate RAG Answer & Update Graph
+            # Validate RAG Answer & Update Graph
         if self._validate_answer(query, rag_answer):
             self.logger.info("RAG answer is valid. Updating Knowledge Graph with new information...")
             
             # Use metadata from the first search result for backfilling
             primary_metadata = search_results[0].payload if search_results else {}
-            self._update_graph(query, rag_answer, context, primary_metadata)
+            
+            # Extract generated Cypher if available
+            generated_cypher = None
+            if "intermediate_steps" in result:
+                for step in result["intermediate_steps"]:
+                    if isinstance(step, dict) and "query" in step:
+                        generated_cypher = step["query"]
+                        break
+            
+            self._update_graph(query, rag_answer, context, metadata=primary_metadata, cypher=generated_cypher)
             
             result["context"] = context
             result["result"] = rag_answer
@@ -295,7 +304,7 @@ class KnowledgeGraph:
         result = chain.invoke({"question": question, "answer": answer})
         return result == "VALID"
 
-    def _update_graph(self, question: str, answer: str, context: str, metadata: dict = None):
+    def _update_graph(self, question: str, answer: str, context: str, metadata: dict = None, cypher: str = None):
         """
         Extracts new knowledge from the (question, answer) pair and adds it to the graph.
         """
@@ -307,14 +316,13 @@ class KnowledgeGraph:
             f"Question: {question}\n"
             f"Answer: {answer}"
         )
+        
+        if cypher:
+            text_to_extract += f"\n\nGenerated Cypher Query (for reference on entities):\n{cypher}"
+
         # Use provided metadata or extract basic info from context
         doc_metadata = {"source": "rag"}
-        if metadata:
-            doc_metadata.update({
-                "video_name": metadata.get("video_name", "N/A"),
-                "time_steps": metadata.get("time_steps", "N/A")
-            })
-
+        
         documents = [Document(page_content=text_to_extract, metadata=doc_metadata)]
         
         graph_documents = self.document_to_graph_agent.convert_to_graph_documents(documents)
@@ -323,9 +331,12 @@ class KnowledgeGraph:
             # Sync metadata to relationships just like in process_chunk
             for graph_doc in graph_documents:
                 for rel in graph_doc.relationships:
-                    rel.properties["time_steps"] = doc_metadata.get("time_steps", "N/A")
-                    rel.properties["video_name"] = doc_metadata.get("video_name", "N/A")
                     rel.properties["source"] = "backfill"
+                    if metadata:
+                        rel.properties["video_name"] = metadata.get("video_name", "N/A")
+                        rel.properties["time_steps"] = metadata.get("time_steps", "N/A")
+                        if "chunk_id" in metadata:
+                            rel.properties["chunk_id"] = metadata["chunk_id"]
 
             nodes_count = sum(len(d.nodes) for d in graph_documents)
             rels_count = sum(len(d.relationships) for d in graph_documents)

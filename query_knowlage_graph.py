@@ -30,18 +30,17 @@ def graph_query(query):
 
 if __name__ == "__main__":
 
-    query = "What timesteps rachel appeared in wedding dress?"
-    answer, result = graph_query(query)
+    # query = "What timesteps rachel appeared in wedding dress?"
+    # answer, result = graph_query(query)
 
-    query = "Which episode did Joey holds a green cup?"
-    answer, result = graph_query(query)
+    # query = "Which episode did Joey holds a green cup?"
+    # answer, result = graph_query(query)
 
-    query = "Did Rachel change her hairstyle this season or not?"
-    answer, result = graph_query(query)
+    # query = "Did Rachel change her hairstyle this season or not?"
+    # answer, result = graph_query(query)
 
-    query = "Who hold Newspaper in Monica’s apartment living room?"
-    answer, result = graph_query(query)
+    # query = "Who hold Newspaper in Monica’s apartment living room?"
+    # answer, result = graph_query(query)
    
-    query = "Who killed Phoebe?"
+    query = "Show me all scenes where Phoebe and Ross are seated nearby"
     answer, result = graph_query(query)
-

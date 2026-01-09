@@ -69,37 +69,53 @@ Schema:
 
 STRICT DATA RULES:
 1. NO 'EPISODE' NODES: There are NO nodes labeled 'Episode'. Video names are properties of RELATIONS.
-2. METADATA ON EDGES: The properties 'video_name' and 'time_steps' are ALWAYS found on the RELATIONSHIP ([r]).
+2. METADATA ON EDGES: The properties 'video_name' and 'time_steps' are on the RELATIONSHIPS.
 3. FUZZY & CASE-INSENSITIVE: Always use 'toLower(node.id) CONTAINS toLower("search_term")' for filtering.
-4. GENERIC RELATIONS: Use generic relationship markers `-[r]->` instead of specific types (like :HOLDS) to capture all variations (HOLDING, HAS, etc.).
-5. MULTI-ENTITY PATHS: For questions involving people, objects, and locations, chain them together: (p:Person)-[r1]->(o:Object)-[r2]->(l:Location).
-6. DEDUPLICATION: Always use 'RETURN DISTINCT' to avoid duplicate answers from multiple video chunks.
+4. GENERIC RELATIONS: Use generic relationship markers `-[r]->` or specific paths if needed, but ALWAYS include Document context.
+5. MULTI-ENTITY PATHS: For questions involving people, objects, and locations, chain them together or ensure they share the same Document.
+6. DEDUPLICATION: Always use 'RETURN DISTINCT' to avoid duplicate answers.
+7. ALWAYS LINK TO DOCUMENT: Start every query with `MATCH (d:Document)-[r:MENTIONS]->(node)`. This allows searching within `d.text` for broad context (actions, emotions, scenes) and retrieving the source text. RETURN `d.text` as `document_context`.
 
 Example Questions & Strategic Cypher:
 
 - "Show me all scenes where Chandler is using a laptop."
-  Query: MATCH (p:Person)-[r1]->(o:Object) 
+  Query: MATCH (d:Document)-[r:MENTIONS]->(p:Person), (d)-[:MENTIONS]->(o:Object)
          WHERE toLower(p.id) CONTAINS "chandler" 
-         AND toLower(o.id) CONTAINS "laptop" 
-         RETURN DISTINCT r1.video_name, r1.time_steps
+         AND toLower(o.id) CONTAINS "laptop"
+         RETURN DISTINCT r.video_name, r.time_steps, d.text AS document_context
+
+- "Did Rachel change her hairstyle?"
+  Query: MATCH (d:Document)-[r:MENTIONS]->(p:Person)
+         WHERE toLower(p.id) CONTAINS "rachel"
+         AND (
+            toLower(d.text) CONTAINS "hair" 
+            OR toLower(d.text) CONTAINS "style"
+         )
+         AND (
+            toLower(d.text) CONTAINS "change"
+            OR toLower(d.text) CONTAINS "new look"
+            OR toLower(d.text) CONTAINS "cut"
+            OR toLower(d.text) CONTAINS "different"
+         )
+         RETURN DISTINCT r.video_name, r.time_steps, d.text AS document_context
 
 - "What location was Ross in when he had a dinosaur bone?"
-  Query: MATCH (p:Person)-[r1]->(o:Object), (p)-[r2]->(l:Location)
+  Query: MATCH (d:Document)-[r:MENTIONS]->(p:Person), (d)-[:MENTIONS]->(o:Object), (d)-[:MENTIONS]->(l:Location)
          WHERE toLower(p.id) CONTAINS "ross" 
-         AND toLower(o.id) CONTAINS "dinosaur" 
-         RETURN DISTINCT l.id, r1.video_name
+         AND toLower(o.id) CONTAINS "dinosaur"
+         RETURN DISTINCT l.id, r.video_name, d.text AS document_context
 
 - "In which episodes did we see Gunther at Central Perk?"
-  Query: MATCH (p:Person)-[r]->(l:Location) 
+  Query: MATCH (d:Document)-[r:MENTIONS]->(p:Person), (d)-[:MENTIONS]->(l:Location)
          WHERE toLower(p.id) CONTAINS "gunther" 
          AND toLower(l.id) CONTAINS "central perk"
-         RETURN DISTINCT r.video_name
+         RETURN DISTINCT r.video_name, d.text AS document_context
 
 - "Did any character interact with a pizza in a kitchen?"
-  Query: MATCH (p:Person)-[r1]->(o:Object)-[r2]->(l:Location)
+  Query: MATCH (d:Document)-[r:MENTIONS]->(p:Person), (d)-[:MENTIONS]->(o:Object), (d)-[:MENTIONS]->(l:Location)
          WHERE toLower(o.id) CONTAINS "pizza"
          AND toLower(l.id) CONTAINS "kitchen"
-         RETURN DISTINCT p.id, r1.video_name, r1.time_steps
+         RETURN DISTINCT p.id, r.video_name, r.time_steps, d.text AS document_context
 
 Question: {question}
 Cypher Query:"""
