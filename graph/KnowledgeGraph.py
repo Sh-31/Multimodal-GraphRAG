@@ -2,17 +2,23 @@ import os
 import sys
 import uuid
 import json
+import time
+import base64
+from google import genai
+from google.genai import types
+from pathlib import Path
+from langchain_core.messages import HumanMessage
 from langchain_experimental.graph_transformers import LLMGraphTransformer
 from langchain_core.documents import Document
 from langchain_neo4j import GraphCypherQAChain
 from langchain_core.prompts import ChatPromptTemplate
-from langchain_core.output_parsers import StrOutputParser
+from langchain_core.output_parsers import StrOutputParser, JsonOutputParser
 from llm.factory import LLMFactory
 from preprocessor.helper import chunk_text, get_logger
 from .qdrant_db import QdrantVectorDB
 from .neo4j_client import Neo4jClient
-from .prompts import Answer_Validity_Prompt, Summarize_Group_Video_Chunks, CYPHER_GENERATION_PROMPT
-import time
+from .prompts import (Answer_Validity_Prompt, Summarize_Group_Video_Chunks,
+                     CYPHER_GENERATION_RESTRICTED_PROMPT, USER_QUERY_REWRITE_PROMPT)
 
 class KnowledgeGraph:
     def __init__(self, llm, collection_name="multimodal_rag"):
@@ -111,9 +117,6 @@ class KnowledgeGraph:
             self.logger.info(f"Processing video: {video_name} - group {i+1}/{len(merged_chunks)}")
             merged_chunks_capution = f"Episode name: {video_name}\n"
             
-            # # add 1 min delay between chunks
-            # time.sleep(60)
-            
             for j, chunk in enumerate(merged_chunk):
                 merged_chunks_capution += f"Chunk {j+1}:\n, time_steps: {chunk['start_chunk']} - {chunk['end_chunk']}\n{chunk['caption']}\n"
             
@@ -152,7 +155,6 @@ class KnowledgeGraph:
             group_chunks_subtitle_metadatas = []
          
             for j, chunk in enumerate(merged_chunk):
-                
                 # Chunk captions
                 caption_chunks = chunk_text(chunk['caption'])
                 for k, cap in enumerate(caption_chunks):
@@ -213,7 +215,7 @@ class KnowledgeGraph:
             return_intermediate_steps=True,
             allow_dangerous_requests=True,
             verbose=True,
-            cypher_prompt=CYPHER_GENERATION_PROMPT
+            cypher_prompt=CYPHER_GENERATION_RESTRICTED_PROMPT
         )
 
         result = chain.invoke({"query": query})
@@ -222,58 +224,132 @@ class KnowledgeGraph:
         return answer, result
 
 
-    def query(self, query: str, limit: int = 3):
+    def query(self, query: str, limit: int = 3, num_candidates: int = 2):
         """
         Hybrid query: Graph -> Vector (Fallback) -> Graph Update (Learning)
         """
         self.logger.info(f"Querying: {query}")
         
-        # Query Graph
-        chain = GraphCypherQAChain.from_llm(
+        original_query = query
+        schema = self.neo4j.graph.schema
+        
+        # Rewrite user query to multiple candidates
+        rewrite_chain = USER_QUERY_REWRITE_PROMPT | self.llm | JsonOutputParser()
+        rewritten_result = rewrite_chain.invoke({"question": query, "schema": schema, "num_candidates": num_candidates})
+
+        if type(rewritten_result) == dict:
+            candidate_queries = rewritten_result.get("candidate_queries", [query])
+            refined_query = rewritten_result.get("refined_query", query)
+        else:
+            candidate_queries = [query]
+            refined_query = query
+         
+        self.logger.info(f"Candidate Queries: {candidate_queries}")
+
+        # Natural language query to Cypher language query
+        restricted_cypher_chain = GraphCypherQAChain.from_llm(
             llm=self.llm,
             graph=self.neo4j.graph,
             return_intermediate_steps=True,
             allow_dangerous_requests=True,
             verbose=True,
-            cypher_prompt=CYPHER_GENERATION_PROMPT
+            cypher_prompt=CYPHER_GENERATION_RESTRICTED_PROMPT
         )
-        result = chain.invoke({"query": query})
-        answer = result["result"]
+
+        cypher_chain = GraphCypherQAChain.from_llm(
+            llm=self.llm,
+            graph=self.neo4j.graph,
+            return_intermediate_steps=True,
+            allow_dangerous_requests=True,
+            verbose=True,
+        )
+
+        answer, result = None, None
+        for i, cand_query in enumerate(candidate_queries):
+            self.logger.info(f"Trying candidate {i+1}/{len(candidate_queries)}: {cand_query}")
+
+            # Try with cypher chain first
+            result = cypher_chain.invoke({"query": cand_query})
+            answer = result["result"]
         
-        # Validate Graph Answer
-        if self._validate_answer(query, answer): # if valid, return answer
-            return answer, result
+            if self._validate_answer(refined_query, answer):
+                self.logger.info(f"Valid answer found with candidate {i+1}")
+                return answer, result
+
+            # Try with restricted cypher chain
+            result = restricted_cypher_chain.invoke({"query": cand_query})
+            answer = result["result"]
+        
+            if self._validate_answer(refined_query, answer):
+                self.logger.info(f"Valid answer found with candidate {i+1}")
+                return answer, result
 
         # If invalid, fall back to Vector DB        
-        self.logger.info(f"Graph answer ('{answer}') insufficient/invalid, falling back to Vector DB...")
+        self.logger.info(f"Graph answer ('{answer}') insufficient/invalid, falling back to Video revisiting and Vector DB...")
         
         # Vector Search & RAG
-        search_results = self.vector_db.search(query, limit=limit)
+        search_results = self.vector_db.search(refined_query, limit=limit)
+        known_video_chunks = []
         context_parts = []
         for res in search_results:
             text = res.payload.get('text', '')
             time = res.payload.get('time_steps', 'Unknown Time')
             video = res.payload.get('video_name', 'Unknown Video')
+            chunk_index = res.payload.get('chunk_index', 'Unknown Chunk')
+            sub_chunk_index = res.payload.get('sub_chunk_index', 'Unknown Sub Chunk')
             context_parts.append(f"Video: {video}\nTime: {time}\nContent: {text}")
+
+            if res.payload.get('video_name') and res.payload.get('chunk_index'):
+                known_video_chunks.append([res.payload.get('video_name'), res.payload.get('chunk_index'),  res.payload])
 
         self.logger.info("Context retrieved from Vector DB:")    
         context = "\n---\n".join(context_parts)
 
-        self.logger.info(context)
-        
         if not context:
             return "I don't know.", result
-                
+      
+        # self.logger.info(context)
+        self.logger.info("\n\n")
+        self.logger.info("Revisiting video chunks...")
+        for video_name, chunk_index, metadata in known_video_chunks:
+            new_caption = self.revisit_video_chunk(refined_query, video_name, chunk_index)
+
+            prompt = ChatPromptTemplate.from_template(
+                "Answer the question based only on the following context. If you cannot answer the question, say 'I don't know'.\n\nContext:\n{context}\n\nQuestion: {question}"
+            )
+            
+            chain = prompt | self.llm
+            response = chain.invoke({"context": new_caption, "question": refined_query})
+            answer = response.content
+
+            if self._validate_answer(refined_query, answer):
+                result["context"] = new_caption
+              
+                # Extract generated Cypher
+                generated_cypher = None
+                if "intermediate_steps" in result:
+                    for step in result["intermediate_steps"]:
+                        if isinstance(step, dict) and "query" in step:
+                            generated_cypher = step["query"]
+                            break
+        
+                self._update_graph(refined_query, answer, new_caption, metadata=metadata, cypher=generated_cypher)
+
+                return answer, result
+
+        self.logger.info("Video chunks revisited failed. Fallback to RAG...")
+        self.logger.info("\n\n")
+
         prompt = ChatPromptTemplate.from_template(
             "Answer the question based only on the following context. If you cannot answer the question, say 'I don't know'.\n\nContext:\n{context}\n\nQuestion: {question}"
         )
         
         chain = prompt | self.llm
-        response = chain.invoke({"context": context, "question": query})
+        response = chain.invoke({"context": context, "question": refined_query})
         rag_answer = response.content
-            
-            # Validate RAG Answer & Update Graph
-        if self._validate_answer(query, rag_answer):
+
+        # Validate RAG Answer & Update Graph
+        if self._validate_answer(refined_query, rag_answer):
             self.logger.info("RAG answer is valid. Updating Knowledge Graph with new information...")
             
             # Use metadata from the first search result for backfilling
@@ -287,8 +363,7 @@ class KnowledgeGraph:
                         generated_cypher = step["query"]
                         break
             
-            self._update_graph(query, rag_answer, context, metadata=primary_metadata, cypher=generated_cypher)
-            
+            self._update_graph(refined_query, rag_answer, context, metadata=primary_metadata, cypher=generated_cypher)
             result["context"] = context
             result["result"] = rag_answer
 
@@ -308,44 +383,82 @@ class KnowledgeGraph:
         """
         Extracts new knowledge from the (question, answer) pair and adds it to the graph.
         """
-        # Include context in the text to extract so the transformer has enough info to link entities correctly
+        # Include context in the text to extract so the transforme  r has enough info to link entities correctly
         text_to_extract = (
-            f"Based on the following context, extract entities and relationships to update the knowledge graph. "
-            f"Focus on the entities mentioned in the answer and link them based on the context.\n\n"
-            f"Context:\n{context}\n\n"
+            f"Based on this cypher query and that user question and answer and context, extract entities and relationships to update the knowledge graph to answer this question.\n\n"
+            f"Cypher Query: {cypher}\n"
             f"Question: {question}\n"
-            f"Answer: {answer}"
+            f"Answer: {answer}\n"
+            f"Context: {context}"
         )
-        
-        if cypher:
-            text_to_extract += f"\n\nGenerated Cypher Query (for reference on entities):\n{cypher}"
 
-        # Use provided metadata or extract basic info from context
         doc_metadata = {"source": "rag"}
+        if metadata:
+            doc_metadata.update(metadata)
         
         documents = [Document(page_content=text_to_extract, metadata=doc_metadata)]
-        
         graph_documents = self.document_to_graph_agent.convert_to_graph_documents(documents)
         
         if graph_documents:
-            # Sync metadata to relationships just like in process_chunk
-            for graph_doc in graph_documents:
-                for rel in graph_doc.relationships:
-                    rel.properties["source"] = "backfill"
-                    if metadata:
-                        rel.properties["video_name"] = metadata.get("video_name", "N/A")
-                        rel.properties["time_steps"] = metadata.get("time_steps", "N/A")
-                        if "chunk_id" in metadata:
-                            rel.properties["chunk_id"] = metadata["chunk_id"]
-
             nodes_count = sum(len(d.nodes) for d in graph_documents)
             rels_count = sum(len(d.relationships) for d in graph_documents)
-            self.logger.info(f"Backfilling Graph: Found {nodes_count} nodes and {rels_count} relationships.")
-            
+            self.logger.info(f"Found {nodes_count} nodes and {rels_count} relationships.")
             self.neo4j.add_graph_documents(graph_documents, include_source=True)
             
             # Refresh schema so the Cypher agent can see the new labels/properties
             self.neo4j.refresh_schema()
             self.logger.info("Graph schema refreshed.")
         else:
-            self.logger.info("Backfilling Graph: No graph data extracted from answer.")
+            self.logger.info("No graph data extracted from answer.")
+
+    def _encode_image(self,image_path):
+        with open(image_path, "rb") as image_file:
+            encoded_string = base64.b64encode(image_file.read()).decode("utf-8")
+        return f"data:image/png;base64,{encoded_string}"
+
+    def revisit_video_chunk(self, query: str, video_name: str, chunk_index: int):
+        main_video_root_path = Path("/home/sh-31/repo/Multimodal-GraphRAG/data/episodes_splitted/") 
+        meta_path = Path("/home/sh-31/repo/Multimodal-GraphRAG/data/meta/") 
+        chunk_id = str(chunk_index + 1).zfill(5)
+        video_chunk_path = Path(f"{video_name}/chunk_{chunk_id}/{chunk_id}.mp4")
+        video_path = main_video_root_path / video_chunk_path
+        self.logger.info(f"Revisiting video chunk {video_chunk_path}...")
+
+        with open(video_path, "rb") as video_file:
+            video_data = base64.b64encode(video_file.read()).decode("utf-8")
+
+        
+        message = HumanMessage(
+            content=[
+                {"type": "text", "text": (
+                    "## CHARACTER REFERENCE GUIDE\n"
+                    "Study these reference images carefully. You will use ONLY these names.\n"
+                    "Match faces by: facial features, overall appearance."
+                )},
+                
+                {"type": "image_url", "image_url": {"url": self._encode_image(str(meta_path / "Monica Geller.png"))}},
+                {"type": "text", "text": "Reference 1: Monica Geller"},
+                {"type": "image_url", "image_url": {"url": self._encode_image(str(meta_path / "Ross Geller.png"))}},
+                {"type": "text", "text": "Reference 2: Ross Geller"},
+                {"type": "image_url", "image_url": {"url": self._encode_image(str(meta_path / "Rachel Green.png"))}},
+                {"type": "text", "text": "Reference 3: Rachel Green"},
+                {"type": "image_url", "image_url": {"url": self._encode_image(str(meta_path / "Chandler Bing.png"))}},
+                {"type": "text", "text": "Reference 4: Chandler Bing"},
+                {"type": "image_url", "image_url": {"url": self._encode_image(str(meta_path / "Phoebe Buffay.png"))}},
+                {"type": "text", "text": "Reference 5: Phoebe Buffay"},
+                {"type": "image_url", "image_url": {"url": self._encode_image(str(meta_path / "Joey Tribbiani.png"))}},
+                {"type": "text", "text": "Reference 6: Joey Tribbiani"},
+                
+                {
+                    "type": "media",
+                    "mime_type": "video/mp4",
+                    "data": video_data
+                },
+
+                {"type": "text", "text": "Caption this video in detail to help answer this user query given the video query: {query}"},
+            ]
+        )
+        
+        response = self.llm.invoke([message])
+        self.logger.info(f"Revisited video chunk {video_chunk_path} with query {query}. New caption: {response.content}")
+        return response.content

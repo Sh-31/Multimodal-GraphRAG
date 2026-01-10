@@ -1,0 +1,50 @@
+2026-01-10 13:26:32,181 - KnowledgeGraph - INFO - Querying: Find all timesteps and episode name did Joey hold cup?
+2026-01-10 13:26:48,633 - KnowledgeGraph - INFO - Candidate Queries: ["Retrieve the `time_steps` and `video_name` properties from all `HOLDING` relationships where a `Person` node with `id: 'Joey'` is `HOLDING` an `Object` node with `id: 'cup'`.", "Identify `Document` nodes that explicitly `MENTIONS` a `Person` node with `id: 'Joey'` and also `MENTIONS` an `Object` node with `id: 'cup'`. From these `Document` nodes, extract their respective `time_steps` and `video_name` properties."]
+2026-01-10 13:26:48,641 - KnowledgeGraph - INFO - Trying candidate 1/2: Retrieve the `time_steps` and `video_name` properties from all `HOLDING` relationships where a `Person` node with `id: 'Joey'` is `HOLDING` an `Object` node with `id: 'cup'`.
+2026-01-10 13:27:00,852 - KnowledgeGraph - INFO - Trying candidate 2/2: Identify `Document` nodes that explicitly `MENTIONS` a `Person` node with `id: 'Joey'` and also `MENTIONS` an `Object` node with `id: 'cup'`. From these `Document` nodes, extract their respective `time_steps` and `video_name` properties.
+2026-01-10 13:27:13,118 - KnowledgeGraph - INFO - Graph answer ('I don't know the answer.') insufficient/invalid, falling back to Video revisiting and Vector DB...
+2026-01-10 13:27:13,180 - KnowledgeGraph - INFO - Context retrieved from Vector DB:
+2026-01-10 13:27:13,181 - KnowledgeGraph - INFO - 
+
+
+2026-01-10 13:27:13,181 - KnowledgeGraph - INFO - Revisiting video chunks...
+2026-01-10 13:27:13,181 - KnowledgeGraph - INFO - Revisiting video chunk 1x21 - The One With The Fake Monica/chunk_00004/00004.mp4...
+2026-01-10 13:28:42,793 - KnowledgeGraph - INFO - Revisited video chunk 1x21 - The One With The Fake Monica/chunk_00004/00004.mp4 with query What are the specific time intervals and corresponding episode titles during which the character Joey was observed holding a cup?. New caption: This video features characters from the TV show "Friends."
+
+*   **0:00 - 0:02**: Rachel Green is seen sitting at the kitchen table, looking bored or tired, with her head resting on her hand. Monica Geller is partially visible to her right.
+*   **0:02 - 0:07**: An aerial establishing shot of a city, presumably New York, is shown.
+*   **0:08 - 0:11**: Joey Tribbiani and Chandler Bing are sitting on the iconic orange couch in Central Perk. Joey is holding a pencil and a notepad.
+    *   **Chandler Bing**: "How about Joey Pepone?"
+    *   **Joey Tribbiani**: "Oh, still too ethnic."
+*   **0:12 - 0:14**: A close-up of Joey Tribbiani as he speaks.
+    *   **Joey Tribbiani**: "My agent thinks I should have a name that's more neutral."
+*   **0:15 - 0:16**: A close-up of Chandler Bing.
+    *   **Chandler Bing**: "Joey Switzerland?"
+*   **0:17 - 0:20**: Joey and Chandler are back in a wider shot. A waitress approaches with a tray of drinks.
+*   **0:20 - 0:22**: The waitress places a green mug on the coffee table in front of Joey.
+*   **0:22 - 0:26**: Joey Tribbiani gestures with his hands to emphasize his point.
+    *   **Joey Tribbiani**: "Plus, you know, I think it should be Joe. You know, Joey makes me sound like I'm, oh, this big." (He gestures with his hands indicating something very small.)
+*   **0:27 - 0:30**: Joey continues to speak while Chandler makes a "stop" motion with his hands.
+    *   **Joey Tribbiani**: "Which I'm not."
+*   **0:30 - 0:33**: Chandler Bing suggests a new name while Joey Tribbiani thinks.
+    *   **Chandler Bing**: "Joe, Joe, Joe Stalin?"
+*   **0:34 - 0:38**: Joey Tribbiani considers the name, repeating it thoughtfully.
+    *   **Joey Tribbiani**: "Stalin?"
+*   **0:39 - 0:41**: Joey Tribbiani continues to contemplate the name, looking at Chandler.
+    *   **Joey Tribbiani**: "Stalin, do I know that name? That sounds familiar."
+*   **0:42 - 0:44**: Chandler Bing appears puzzled and slightly annoyed, biting his thumb.
+    *   **Chandler Bing**: "Well, it does not ring a bell with me."
+*   **0:45 - 0:49**: Joey Tribbiani repeats the name again, looking deep in thought, then makes a funny face.
+    *   **Joey Tribbiani**: "Joe... Stalin."
+*   **0:50 - 0:54**: Joey Tribbiani smiles, finding the name appealing, and Chandler Bing suggests a slight modification.
+    *   **Joey Tribbiani**: "You know, that's pretty good."
+    *   **Chandler Bing**: "You might want to try Joseph."
+*   **0:55 - 1:05**: Joey Tribbiani enthusiastically writes "Joseph Stalin" in his notebook, laughing. Chandler Bing watches him with amusement.
+    *   **Joey Tribbiani**: "Joseph Stalin!"
+2026-01-10 13:28:47,125 - KnowledgeGraph - INFO - Video chunks revisited failed. Fallback to RAG...
+2026-01-10 13:28:47,125 - KnowledgeGraph - INFO - 
+
+
+2026-01-10 13:28:50,882 - KnowledgeGraph - INFO - RAG answer is valid. Updating Knowledge Graph with new information...
+2026-01-10 13:29:12,075 - KnowledgeGraph - INFO - Found 5 nodes and 4 relationships.
+2026-01-10 13:29:13,527 - KnowledgeGraph - INFO - Graph schema refreshed.

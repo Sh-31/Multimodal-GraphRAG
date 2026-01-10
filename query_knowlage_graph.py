@@ -30,17 +30,15 @@ def graph_query(query):
 
 if __name__ == "__main__":
 
-    # query = "What timesteps rachel appeared in wedding dress?"
-    # answer, result = graph_query(query)
+       qurey = "Find all timesteps and episode name did Joey hold mug?"
+       answer, result = graph_query(qurey)
 
-    # query = "Which episode did Joey holds a green cup?"
-    # answer, result = graph_query(query)
+    # # qurey = "Find all timesteps did any character kiss? and name of episode?"
+    # # answer, result = graph_query(qurey)
 
-    # query = "Did Rachel change her hairstyle this season or not?"
-    # answer, result = graph_query(query)
+    # # qurey = "What kinds of food did Joey eat across these episodes?"
+    # # answer, result = graph_query(qurey)
 
-    # query = "Who hold Newspaper in Monica’s apartment living room?"
-    # answer, result = graph_query(query)
-   
-    query = "Show me all scenes where Phoebe and Ross are seated nearby"
-    answer, result = graph_query(query)
+    # qurey = "Who smoked that most?"
+    # answer, result = graph_query(qurey)
+

@@ -58,7 +58,31 @@ Return ONLY "VALID" or "INVALID".
 """
 )
 
-CYPHER_GENERATION_PROMPT = PromptTemplate(
+USER_QUERY_REWRITE_PROMPT = PromptTemplate(
+    input_variables=["question", "schema", "num_candidates"],
+    template="""
+You are an expert at optimizing queries for Knowledge Graphs and Vector Databases.
+Your task is to take a raw user query and rewrite it in two specific ways:
+
+1. Graph Schema Aligned Query: Rewrite the query to explicitly mention node labels (Person, Object, Location, Document) and relationships likely present in the graph. Make it precise and entity-focused.
+   - Example: "Where is the cat?" -> "What Location is the Object 'cat' in?"
+
+2. Refined Natural Language Query: Rewrite the query to be clearer, more self-contained, and grammatically correct.
+
+Schema:
+{schema}
+
+Output strictly in JSON format with the following key:
+- "candidate_queries": A list of {num_candidates} different versions of the query aligned with the graph schema (Person, Object, Location, Document).
+- "refined_query": A single refined natural language version of the query.
+
+Do not add markdown formatting.
+
+Original Question: {question}
+"""
+)
+
+CYPHER_GENERATION_RESTRICTED_PROMPT = PromptTemplate(
     input_variables=["schema", "question"],
     template="""
 Task: Generate a Cypher query to answer the user's question about video content.

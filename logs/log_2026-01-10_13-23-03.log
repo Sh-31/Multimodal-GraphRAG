@@ -1,0 +1,11 @@
+2026-01-10 13:23:03,811 - KnowledgeGraph - INFO - Querying: Find all timesteps and episode name did Joey hold cup?
+2026-01-10 13:23:12,513 - KnowledgeGraph - INFO - Candidate Queries: ["What are the `time_steps` and `video_name` from all `HOLDING` relationships where a `Person` node with `id: 'Joey'` is connected to an `Object` node with `id: 'cup'`?", "For every instance where a `Person` node with `id: 'Joey'` is found in a `HOLDING` relationship with an `Object` node with `id: 'cup'`, retrieve the `time_steps` and `video_name` properties from that specific `HOLDING` relationship."]
+2026-01-10 13:23:12,521 - KnowledgeGraph - INFO - Trying candidate 1/2: What are the `time_steps` and `video_name` from all `HOLDING` relationships where a `Person` node with `id: 'Joey'` is connected to an `Object` node with `id: 'cup'`?
+2026-01-10 13:23:25,004 - KnowledgeGraph - INFO - Trying candidate 2/2: For every instance where a `Person` node with `id: 'Joey'` is found in a `HOLDING` relationship with an `Object` node with `id: 'cup'`, retrieve the `time_steps` and `video_name` properties from that specific `HOLDING` relationship.
+2026-01-10 13:23:34,002 - KnowledgeGraph - INFO - Graph answer ('I don't know the answer.') insufficient/invalid, falling back to Video revisiting and Vector DB...
+2026-01-10 13:23:34,028 - KnowledgeGraph - INFO - Context retrieved from Vector DB:
+2026-01-10 13:23:34,028 - KnowledgeGraph - INFO - 
+
+
+2026-01-10 13:23:34,028 - KnowledgeGraph - INFO - Revisiting video chunks...
+2026-01-10 13:23:34,028 - KnowledgeGraph - INFO - Revisiting video chunk 1x21 - The One With The Fake Monica/chunk_00004/00004.mp4...
