@@ -382,34 +382,94 @@ class KnowledgeGraph:
     def _update_graph(self, question: str, answer: str, context: str, metadata: dict = None, cypher: str = None):
         """
         Extracts new knowledge from the (question, answer) pair and adds it to the graph.
+        Ensures the graph can answer this query correctly in the future.
         """
-        # Include context in the text to extract so the transforme  r has enough info to link entities correctly
-        text_to_extract = (
-            f"Based on this cypher query and that user question and answer and context, extract entities and relationships to update the knowledge graph to answer this question.\n\n"
-            f"Cypher Query: {cypher}\n"
-            f"Question: {question}\n"
-            f"Answer: {answer}\n"
-            f"Context: {context}"
-        )
+        text_to_extract = self._build_graph_extraction_prompt(question, answer, context, cypher)
 
-        doc_metadata = {"source": "rag"}
+        doc_metadata = {"source": "rag_learning"}
         if metadata:
-            doc_metadata.update(metadata)
+            essential_keys = ["video_name", "time_steps", "chunk_id", "type"]
+            for key in essential_keys:
+                if key in metadata:
+                    doc_metadata[key] = metadata[key]
         
         documents = [Document(page_content=text_to_extract, metadata=doc_metadata)]
-        graph_documents = self.document_to_graph_agent.convert_to_graph_documents(documents)
         
-        if graph_documents:
-            nodes_count = sum(len(d.nodes) for d in graph_documents)
-            rels_count = sum(len(d.relationships) for d in graph_documents)
-            self.logger.info(f"Found {nodes_count} nodes and {rels_count} relationships.")
-            self.neo4j.add_graph_documents(graph_documents, include_source=True)
-            
-            # Refresh schema so the Cypher agent can see the new labels/properties
-            self.neo4j.refresh_schema()
-            self.logger.info("Graph schema refreshed.")
-        else:
+        graph_documents = self.document_to_graph_agent.convert_to_graph_documents(documents)
+       
+        if not graph_documents:
             self.logger.info("No graph data extracted from answer.")
+            return
+        
+        # Add metadata properties to all relationships (consistent with process_chunk)
+        for graph_doc in graph_documents:
+            for rel in graph_doc.relationships:
+                rel.properties["time_steps"] = doc_metadata.get("time_steps", "N/A")
+                rel.properties["video_name"] = doc_metadata.get("video_name", "N/A")
+                rel.properties["source"] = "rag_learning"  # Mark as learned from RAG
+                rel.properties["original_question"] = question  # Track what question led to this
+                if "chunk_id" in doc_metadata:
+                    rel.properties["chunk_id"] = doc_metadata["chunk_id"]
+        
+        nodes_count = sum(len(d.nodes) for d in graph_documents)
+        rels_count = sum(len(d.relationships) for d in graph_documents)
+        self.logger.info(f"Extracted {nodes_count} nodes and {rels_count} relationships from RAG answer.")
+        
+        for i, d in enumerate(graph_documents):
+            self.logger.info(f"Graph Document {i+1}:")
+            for node in d.nodes:
+                self.logger.info(f"  Node: {node.id} ({node.type}) - Properties: {node.properties}")
+            for rel in d.relationships:
+                self.logger.info(f"  Relationship: {rel.source.id} -[{rel.type}]-> {rel.target.id} - Properties: {rel.properties}")
+        
+      
+        self.neo4j.add_graph_documents(graph_documents, include_source=True)
+        self.neo4j.refresh_schema()
+         
+    def _build_graph_extraction_prompt(self, question: str, answer: str, context: str, cypher: str = None) -> str:
+        """
+        Builds a clear prompt for extracting graph data that will help answer the question.
+        """
+        prompt_parts = [
+            "# Task: Extract Knowledge Graph Information",
+            "",
+            "Your goal is to extract entities and relationships that directly answer the user's question.",
+            "Focus on creating a graph structure that would allow a graph database query to retrieve this answer.",
+            "",
+            f"## User Question",
+            question,
+            "",
+            f"## Verified Answer",
+            answer,
+            "",
+        ]
+        
+        # Add cypher context if available to understand what was being queried
+        if cypher:
+            prompt_parts.extend([
+                "## Failed Cypher Query (for context)",
+                "This query didn't return the answer, so we need to add missing information:",
+                cypher,
+                "",
+            ])
+        
+        # Add focused context (truncate if too long to avoid confusion)
+        context_preview = context[:2000] + "..." if len(context) > 2000 else context
+        prompt_parts.extend([
+            "## Supporting Context",
+            context_preview,
+            "",
+            "## Instructions",
+            "1. Identify the main entities mentioned in the question and answer",
+            "2. Extract relationships between these entities that capture the answer",
+            "3. Focus on factual, specific relationships (e.g., WORE, SAID, INTERACTED_WITH, WAS_IN_SCENE)",
+            "4. Include character names, objects, actions, and locations as entities",
+            "5. Make sure the extracted graph would allow the original question to be answered via a graph query",
+            "",
+            "Extract entities and relationships now:"
+        ])
+        
+        return "\n".join(prompt_parts)
 
     def _encode_image(self,image_path):
         with open(image_path, "rb") as image_file:
@@ -455,7 +515,7 @@ class KnowledgeGraph:
                     "data": video_data
                 },
 
-                {"type": "text", "text": "Caption this video in detail to help answer this user query given the video query: {query}"},
+                {"type": "text", "text": f"""## USER QUERY {query} ## YOUR TASK Create a detailed caption of this video clip that specifically helps answer the user's query above. Focus your description on aspects most relevant to the query while still providing complete context. Prioritize information that directly addresses: {query}"""},
             ]
         )
         

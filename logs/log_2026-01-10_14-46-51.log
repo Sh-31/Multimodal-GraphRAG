@@ -1,0 +1,27 @@
+2026-01-10 14:46:51,628 - KnowledgeGraph - INFO - Querying: Find all timesteps and episode name did Joey hold mug?
+2026-01-10 14:46:56,755 - KnowledgeGraph - INFO - Candidate Queries: ["What are the time_steps and video_name properties of the HOLDS relationship where a Person node with id 'Joey' is connected to an Object node with id 'mug'?", "Identify the time_steps and video_name from all HOLDS relationships where a Person entity named 'Joey' holds an Object entity identified as 'mug'."]
+2026-01-10 14:46:56,765 - KnowledgeGraph - INFO - Trying candidate 1/2: What are the time_steps and video_name properties of the HOLDS relationship where a Person node with id 'Joey' is connected to an Object node with id 'mug'?
+2026-01-10 14:47:23,728 - KnowledgeGraph - INFO - Trying candidate 2/2: Identify the time_steps and video_name from all HOLDS relationships where a Person entity named 'Joey' holds an Object entity identified as 'mug'.
+2026-01-10 14:47:32,843 - KnowledgeGraph - INFO - Graph answer ('I don't know the answer.') insufficient/invalid, falling back to Video revisiting and Vector DB...
+2026-01-10 14:47:33,094 - KnowledgeGraph - INFO - Context retrieved from Vector DB:
+2026-01-10 14:47:33,094 - KnowledgeGraph - INFO - 
+
+
+2026-01-10 14:47:33,094 - KnowledgeGraph - INFO - Revisiting video chunks...
+2026-01-10 14:47:33,095 - KnowledgeGraph - INFO - Revisiting video chunk 1x21 - The One With The Fake Monica/chunk_00004/00004.mp4...
+2026-01-10 14:49:02,649 - KnowledgeGraph - INFO - Revisited video chunk 1x21 - The One With The Fake Monica/chunk_00004/00004.mp4 with query What are the specific timesteps and episode names when Joey was holding a mug?. New caption: In this clip from **Friends, Season 1, Episode 10: "The One With The Monkey"**:
+
+Joey is seen holding a mug during the following timesteps:
+
+*   **0:20 - 0:26**: Joey is handed a blue mug by a waitress. He immediately picks it up, takes a sip, briefly places it down, then picks it up again, holding and gesturing with it as he talks to Chandler, before finally placing it back on the table.
+2026-01-10 14:49:26,670 - KnowledgeGraph - INFO - Extracted 5 nodes and 4 relationships from RAG answer.
+2026-01-10 14:49:26,670 - KnowledgeGraph - INFO - Graph Document 1:
+2026-01-10 14:49:26,670 - KnowledgeGraph - INFO -   Node: Joey (Person) - Properties: {}
+2026-01-10 14:49:26,670 - KnowledgeGraph - INFO -   Node: Mug (Object) - Properties: {}
+2026-01-10 14:49:26,670 - KnowledgeGraph - INFO -   Node: The One With The Monkey (Episode) - Properties: {}
+2026-01-10 14:49:26,670 - KnowledgeGraph - INFO -   Node: 0:20 - 0:26 (Timestep) - Properties: {}
+2026-01-10 14:49:26,670 - KnowledgeGraph - INFO -   Node: Joey Holding A Mug In 'The One With The Monkey' (0:20-0:26) (Action) - Properties: {}
+2026-01-10 14:49:26,671 - KnowledgeGraph - INFO -   Relationship: Joey -[PERFORMS]-> Joey Holding A Mug In 'The One With The Monkey' (0:20-0:26) - Properties: {'time_steps': '00:08:02.648 - 00:08:59.246', 'video_name': '1x21 - The One With The Fake Monica', 'source': 'rag_learning', 'original_question': 'What are the specific timesteps and episode names when Joey was holding a mug?'}
+2026-01-10 14:49:26,671 - KnowledgeGraph - INFO -   Relationship: Joey Holding A Mug In 'The One With The Monkey' (0:20-0:26) -[HAS_OBJECT]-> Mug - Properties: {'time_steps': '00:08:02.648 - 00:08:59.246', 'video_name': '1x21 - The One With The Fake Monica', 'source': 'rag_learning', 'original_question': 'What are the specific timesteps and episode names when Joey was holding a mug?'}
+2026-01-10 14:49:26,671 - KnowledgeGraph - INFO -   Relationship: Joey Holding A Mug In 'The One With The Monkey' (0:20-0:26) -[OCCURS_AT]-> 0:20 - 0:26 - Properties: {'time_steps': '00:08:02.648 - 00:08:59.246', 'video_name': '1x21 - The One With The Fake Monica', 'source': 'rag_learning', 'original_question': 'What are the specific timesteps and episode names when Joey was holding a mug?'}
+2026-01-10 14:49:26,671 - KnowledgeGraph - INFO -   Relationship: Joey Holding A Mug In 'The One With The Monkey' (0:20-0:26) -[OCCURS_IN]-> The One With The Monkey - Properties: {'time_steps': '00:08:02.648 - 00:08:59.246', 'video_name': '1x21 - The One With The Fake Monica', 'source': 'rag_learning', 'original_question': 'What are the specific timesteps and episode names when Joey was holding a mug?'}
